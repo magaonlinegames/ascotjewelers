@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>JMA International Jewelry Design Contest | Ascot Jewelers</title>
+        <script id="www-widgetapi-script" src="https://s.ytimg.com/yts/jsbin/www-widgetapi-vflS50iB-/www-widgetapi.js" async=""></script>
+        <script src="https://www.youtube.com/player_api"></script>
+        
+       
+
+        <link rel="shortcut icon" href="img/ascot.png">
+        <link rel="stylesheet" href="css/room.min.css" />
+        <link rel="stylesheet" href="GOD.css">
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+        <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+
+        <link rel="stylesheet preload" as="style" href="css/preload.min.css" />
+        <link rel="stylesheet preload" as="style" href="css/libs.min.css" />
+    </head>
+    <body>
+        <div class="VOTER_INFO ghide">
+            <i class=""></i>
+            
+            <div class="form_card">
+                <section class="review col-lg-8">
+                    <h3 class="review_header" style="color: #888888;">
+                        Vote for your favorite Designer
+                    </h3>
+                    <form
+                        class="review_form contacts_form form d-sm-flex flex-wrap justify-content-between"
+                        action="#"
+                        method="post"
+                        data-type="reviewRoom"
+                    >
+
+                        <div class="field-wrapper">
+                            <label class="label" for="voter_first_name">
+                                <i class="icon-user icon"></i>
+                            </label>
+                            <input class="field required" id="voter_first_name" type="text" placeholder="First name" />
+                        </div>
+                        <div class="field-wrapper">
+                            <label class="label" for="voter_last_name">
+                                <i class="icon-user icon"></i>
+                            </label>
+                            <input class="field required" id="voter_last_name" type="text" placeholder="Last name" />
+                        </div>
+                        <div class="field-wrapper fwidth">
+                            <label class="label" for="voter_email">
+                                <i class="icon-email icon"></i>
+                            </label>
+                            <input class="field required" id="voter_email" type="text" data-type="text" placeholder="Email" />
+                        </div>
+                        <div class="field-wrapper fwidth">
+                            <label class="label" for="voter_home_address">
+                                <i class="icon-usd icon">*</i>
+                            </label>
+                            <input class="field required" id="voter_home_address" type="text" data-type="text" placeholder="Home Address" />
+                            <span>
+                                Please enter the address that you used to register your account with us.
+                            </span>
+                        </div>
+                        <textarea class="field textarea required" id="voter_message" placeholder="Messages you write here will be posted. Leave blank if you don't want it posted."></textarea>
+                        <button class="btn theme-element theme-element--accent" type="submit" id="voter_send_btn"> <a onclick="submitVoterInfo();" id="submit_voter_btn">Submit</a> </button>
+                    </form>
+                </section>
+            </div>
+
+
+
+            <div class="vote-loading ghide">
+                <div class="mainCircle">
+                    <div class="circle"></div>
+                  </div>
+            </div>
+            <div class="vote-confirmed ghide">
+                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                    <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                    <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                  </svg>
+
+                  <div class="checked">
+                    <p>
+                        You have succesfully voted for <a id="voter_chosen"></a>. 
+                        <br>
+                        One of our employees will contact you to verify the validity of your vote.
+                    
+                    </p>
+                  </div>
+            </div>
+
+            <div class="voted_for_david ghide">
+                <!-- stages section start -->
+                <section class="about_stages section">
+                    <div class="container d-xl-flex align-items-center">
+                        <div class="about_stages-main col-xl-6">
+                            <h2 class="about_stages-main_header" data-aos="fade-right">You Voted for <span class="votedForWho"></span>!</h2>
+                            <ul class="about_stages-main_list">
+                               
+                                <li class="list-item d-flex align-items-sm-center" data-aos="fade-up" data-aos-delay="50">
+                                    <div class="media">
+                                        <span class="theme-element">
+                                            2
+                                        </span>
+                                    </div>
+                                    <div class="main">
+                                        <h4 class="main_title">  David J. Howard  </h4>
+                                        <p class="main_text"> <span class="david_vote"></span> people voted so far</p>
+                                    </div>
+                                </li>
+                                <li class="list-item d-flex align-items-sm-center" data-aos="fade-up">
+                                    <div class="media">
+                                        <span class="theme-element">
+                                            1
+                                        </span>
+                                    </div>
+                                    <div class="main">
+                                        <h4 class="main_title">Davene O. Muller</h4>
+                                        <p class="main_text"> <span class="davene_vote"></span> people voted so far</p>
+                                    </div>
+                                </li>
+                                <li class="list-item d-flex align-items-sm-center" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="media">
+                                        <span class="theme-element">
+                                            3
+                                        </span>
+                                    </div>
+                                    <div class="main">
+                                        <h4 class="main_title"> Donna Louisa Trusty    </h4>
+                                        <p class="main_text"> <span class="katty_vote"></span> people voted so far</p>    
+                                    </div>
+                                </li>
+                                <li class="list-item d-flex align-items-sm-center" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="media">
+                                        <span class="theme-element">
+                                            4
+                                        </span>
+                                    </div>
+                                    <div class="main">
+                                        <h4 class="main_title"> Martha Z. Zaab    </h4>
+                                        <p class="main_text"> <span class="martha_vote"></span> people voted so far</p>    
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="wrapper" data-aos="fade-up">
+                                <a class="about_stages-main_btn btn theme-element theme-element--accent" href="index.html">Continue</a>
+                            </div>
+                        </div>
+                        <div class="about_stages-media col-xl-6" data-aos="fade-in">
+                            <picture>
+                                <source data-srcset="img/james-vote.jpg" srcset="img/james-vote.jpg" />
+                                <img class="lazy" data-src="img/james-vote.jpg" src="img/james-vote.jpg" alt="media" />
+                            </picture>
+                        </div>
+                    </div>
+                </section>
+                <!-- stages section end -->
+            </div>
+        </div>
+        <header class="header d-flex align-items-center" data-page="room">
+            <div class="container position-relative d-flex justify-content-between align-items-center">
+                <a class="brand d-flex align-items-center" href="index.html">
+                    <span class="brand_logo theme-element">
+                        <svg id="brandHeader" width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M7.03198 3.80281V7.07652L3.86083 9.75137L0.689673 12.4263L0.667474 6.56503C0.655304 3.34138 0.663875 0.654206 0.686587 0.593579C0.71907 0.506918 1.4043 0.488223 3.87994 0.506219L7.03198 0.529106V3.80281ZM21.645 4.36419V5.88433L17.0383 9.76316C14.5046 11.8966 11.2263 14.6552 9.75318 15.8934L7.07484 18.145V20.3225V22.5H3.85988H0.64502L0.667303 18.768L0.689673 15.036L2.56785 13.4609C3.60088 12.5946 6.85989 9.85244 9.81009 7.36726L15.1741 2.84867L18.4096 2.8464L21.645 2.84413V4.36419ZM21.645 15.5549V22.5H18.431H15.217V18.2638V14.0274L15.4805 13.7882C15.8061 13.4924 21.5939 8.61606 21.6236 8.61248C21.6353 8.61099 21.645 11.7351 21.645 15.5549Z"
+                                fill="currentColor"
+                            />
+                        </svg>
+                    </span>
+                    <span class="brand_name">Ascot Jewelers</span>
+                </a>
+                <div class="header_offcanvas offcanvas offcanvas-end" id="menuOffcanvas">
+                    <div class="header_offcanvas-header d-flex justify-content-between align-content-center">
+                        <a class="brand d-flex align-items-center" href="index.html">
+                            <span class="brand_logo theme-element ghide">
+                                <svg
+                                    id="brandOffset"
+                                    width="22"
+                                    height="23"
+                                    viewBox="0 0 22 23"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M7.03198 3.80281V7.07652L3.86083 9.75137L0.689673 12.4263L0.667474 6.56503C0.655304 3.34138 0.663875 0.654206 0.686587 0.593579C0.71907 0.506918 1.4043 0.488223 3.87994 0.506219L7.03198 0.529106V3.80281ZM21.645 4.36419V5.88433L17.0383 9.76316C14.5046 11.8966 11.2263 14.6552 9.75318 15.8934L7.07484 18.145V20.3225V22.5H3.85988H0.64502L0.667303 18.768L0.689673 15.036L2.56785 13.4609C3.60088 12.5946 6.85989 9.85244 9.81009 7.36726L15.1741 2.84867L18.4096 2.8464L21.645 2.84413V4.36419ZM21.645 15.5549V22.5H18.431H15.217V18.2638V14.0274L15.4805 13.7882C15.8061 13.4924 21.5939 8.61606 21.6236 8.61248C21.6353 8.61099 21.645 11.7351 21.645 15.5549Z"
+                                        fill="currentColor"
+                                    />
+                                </svg>
+                            </span>
+                            <span class="brand_name ghide">Ascots Jewelers</span>
+                        </a>
+                        <button class="close" type="button" data-bs-dismiss="offcanvas">
+                            <i class="icon-close--entypo"></i>
+                        </button>
+                    </div>
+                    <nav class="header_nav">
+                        <ul class="header_nav-list">
+                            <li class="header_nav-list_item">
+                                <a class="nav-item" href="index.html" data-page="home">Home</a>
+                            </li>
+                            <li class="header_nav-list_item">
+                                <a class="nav-item" href="#Ring" data-page="about">Ring</a>
+                            </li>
+                            <li class="header_nav-list_item">
+                                <a class="nav-item" href="#Necklace" data-page="about">Necklace</a>
+                            </li>
+                            <li class="header_nav-list_item">
+                                <a class="nav-item" href="#Bracelet" data-page="about">Bracelet</a>
+                            </li>
+                                <a class="nav-item" href="team.html" data-page="about">Our Team</a>
+                            </li>
+                            <li class="header_nav-list_item">
+                                <a
+                                    class="nav-link nav-link--contacts  d-inline-flex align-items-center"
+                                    href="contacts.html"
+                                   
+                                >
+                                    Contacts
+                                    <i class="icon-chevron_down--entypo icon"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul class="socials d-flex align-items-center">
+                        <li class="list-item">
+                            <a class="link" href="">
+                                <i class="icon-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a class="link" href="">
+                                <i class="icon-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a class="link" href="">
+                                <i class="icon-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a class="link" href="">
+                                <i class="icon-whatsapp"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <button class="header_trigger d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuOffcanvas">
+                    <i class="icon-stream"></i>
+                </button>
+            </div>
+        </header>
+        <div class="awards_title" style="text-align: center;">
+            <h3>Vote for your Designer</h3>
+        </div>
+        <main>
+            <!-- room section start -->
+            <div class="room section">
+                <div class="container">
+                    <div class="room_main d-lg-flex flex-wrap align-items-start">
+                        <div class="room_main-slider col-12 d-lg-flex">
+                            <div class="room_main-slider_view col-lg-8">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <picture>
+                                            <source data-srcset="img/james-vote.jpg" srcset="img/james-vote.jpg" />
+                                            <img class="lazy" data-src="img/james-vote.jpg" src="img/james-vote.jpg" alt="media" />
+                                        </picture>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <picture>
+                                            <source data-srcset="img/muller.jpg" srcset="img/muller.jpg" />
+                                            <img class="lazy" data-src="img/muller.jpg" src="img/muller.jpg" alt="media" />
+                                        </picture>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <picture>
+                                            <source data-srcset="img/martha.jpg" srcset="img/martha.jpg" />
+                                            <img class="lazy" data-src="img/martha.jpg" src="img/martha.jpg" alt="media" />
+                                        </picture>
+                                    </div>
+                                </div>
+                                <div class="swiper-controls d-flex align-items-center justify-content-between">
+                                    <a class="swiper-button-prev d-inline-flex align-items-center justify-content-center" href="#">
+                                        <i class="icon-arrow_left icon"></i>
+                                    </a>
+                                    <a class="swiper-button-next d-inline-flex align-items-center justify-content-center" href="#">
+                                        <i class="icon-arrow_right icon"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="room_main-slider_thumbs">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <picture>
+                                            <source data-srcset="img/davene_bg.jpg" srcset="img/davene_bg.jpg" />
+                                            <img class="lazy" data-src="img/davene_bg.jpg" src="img/davene_bg.jpg" alt="media" />
+                                        </picture>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <picture>
+                                            <source data-srcset="img/john.jpg" srcset="img/john.jpg" />
+                                            <img class="lazy" data-src="img/john.jpg" src="img/john.jpg" alt="media" />
+                                        </picture>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <picture>
+                                            <source data-srcset="img/betty.jpg" srcset="img/betty.jpg" />
+                                            <img class="lazy" data-src="img/betty.jpg" src="img/betty.jpg" alt="media" />
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="room_main-info col-lg-8">
+                            
+                            <div class="description">
+                                <p class="description_text">
+                                    
+                                </p>
+                            </div>
+                            <section class="rules">
+                                <h4 class="rules_header">
+                                    Honoring Exceptional Design Talent
+                                </h4>
+                                <p>
+                                    Every year, the ASCOT Vision Awards celebrate outstanding talent in the field of jewelry design. 
+                                    The winning designers represent the future of the jewelry manufacturing industry, and the Vision 
+                                    Awards competition showcases their creativity and boosts their careers. Some of the industry’s 
+                                    finest designers
+                                </p>
+                                <br>
+                                <div class="rules_list d-md-flex flex-lg-wrap">
+                                    <div class="rules_list-block">
+                                        <p class="rules_list-block_item d-flex align-items-baseline">
+                                            <i class="icon-check icon"></i>
+                                            $20,000.00 cash prizes
+                                        </p>
+                                        
+                                    </div>
+                                    <div class="rules_list-block">
+                                        
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="room_main-cards col-lg-4">
+                            <div class="room_main-cards_card">
+                                <span class="pricing">
+                                    <span class="pricing_price h2">$20,000</span>
+                                    cash prize
+                                </span>
+                                <form class="booking" action="#" method="post" autocomplete="off" data-type="booking">
+                                    <div class="booking_group d-flex flex-column">
+
+                                        <!-- davene vote -->
+                                        <hr>
+                                        <div class="hide" style="display: block;">
+                                            <label class="booking_group-label h5" for="checkIn">Davene Muller</label>
+
+                                            <div class="booking_group-wrapper hide" >
+                                                <span class="davene_vote" id="vote"> </span> 
+                                                <span class="ldr">  votes</span>
+                                            </div>
+                                        </div>
+                                        <hr>
+
+                                        
+                                        <!-- james -->
+                                        <div class="hide" style="display: block;">
+                                            <label class="booking_group-label h5" for="checkIn">James D Olsen</label>
+
+                                            <div class="booking_group-wrapper hide" >
+                                                <span class="james_vote" id="vote"> </span> 
+                                                <span class="ldr">  votes</span>
+                                            </div>
+                                        </div>
+
+                                        <hr>
+                                        
+                                        
+                                        
+                                        <!-- donna -->
+                                        <div class="hide" style="display: block;">
+                                            <label class="booking_group-label h5" for="checkIn">Donna Louisa Trusty</label>
+
+                                            <div class="booking_group-wrapper hide" >
+                                                <span class="donna_vote" id="vote"> </span> 
+                                                <span class="ldr">  votes</span>
+                                            </div>
+                                        </div>
+
+                                        
+
+                                        <!-- martha vote -->
+                                        <hr>
+                                        <div class="hide" style="display: block;">
+                                            <label class="booking_group-label h5" for="checkIn">Martha Zorana Zaab</label>
+
+                                            <div class="booking_group-wrapper hide" >
+                                                <span class="martha_vote" id="vote"> </span> 
+                                                <span class="ldr">  votes</span>
+                                            </div>
+                                        </div>
+
+
+                                        
+                                        
+                                        
+                                        <hr>
+
+                                    </div>
+                                    <button style="display: none;" class="booking_btn btn theme-element theme-element--accent" type="submit"> <a href="#designers">Vote Now</a> </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <section class="rooms section--blockbg section" id="designers">
+                        <div class="block"></div>
+                        <div class="container">
+                            <div class="rooms_header d-sm-flex justify-content-between align-items-center">
+                                <h2 class="rooms_header-title" data-aos="fade-right"> Designers </h2>
+                                
+                            </div>
+                            <ul class="rooms_list d-md-flex flex-wrap">
+
+                                
+                                <!-- DAVENE -->
+                                <li class="rooms_list-item col-md-6 col-xl-4" data-order="1" data-aos="fade-up">
+                                    <div class="item-wrapper d-md-flex flex-column">
+                                        <div class="media">
+                                            <picture>
+                                                <source data-srcset="img/davene.jpg" srcset="img/davene.jpg" />
+                                                <img class="lazy" data-src="img/davene.jpg" src="img/davene.jpg" alt="media" />
+                                            </picture>
+                                            <span class="media_label media_label--pricing">
+                                                <span class="price h4 davene_vote"></span>
+                                                votes 
+                                            </span>
+                                        </div>
+                                        <div class="main d-md-flex flex-column justify-content-between flex-grow-1">
+                                            <a class="main_title h4 vote_designer_name" onclick="voteFor('davene')" data-shave="true">
+                                                Davene O. Muller
+                                            </a>
+                                            <a class="link link--arrow d-inline-flex align-items-center vote_btn" onclick="voteFor('davene')">
+                                                Vote
+                                                <i class="icon-arrow_right icon"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <!-- JAMES -->
+                                <li class="rooms_list-item col-md-6 col-xl-4" data-order="1" data-aos="fade-up">
+                                    <div class="item-wrapper d-md-flex flex-column">
+                                        <div class="media">
+                                            <picture>
+                                                <source data-srcset="img/vote4james.png" srcset="img/vote4james.png" />
+                                                <img class="lazy" data-src="img/vote4james.png" src="img/vote4james.png" alt="media" />
+                                            </picture>
+                                            <span class="media_label media_label--pricing">
+                                                <span class="price h4 james_vote"> 
+
+                                                </span>
+                                                votes 
+                                            </span>
+                                        </div>
+                                        <div class="main d-md-flex flex-column justify-content-between flex-grow-1">
+                                            <a class="main_title h4 vote_designer_name" onclick="voteFor('james')" data-shave="true">
+                                                James D Olsen
+                                            </a>
+                                            <a class="link link--arrow d-inline-flex align-items-center vote_btn" onclick="voteFor('james'); openJames();">
+                                                Vote
+                                                <i class="icon-arrow_right icon"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                
+                                <!-- DONNA -->
+                                <li class="rooms_list-item col-md-6 col-xl-4" data-order="1" data-aos="fade-up" onclick="openDonna();">
+                                    <div class="item-wrapper d-md-flex flex-column">
+                                        <div class="media">
+                                            <picture>
+                                                <source data-srcset="img/muller222.jpg" srcset="img/muller222.jpg" />
+                                                <img class="lazy" data-src="img/muller222.jpg" src="img/muller222.jpg" alt="media" />
+                                            </picture>
+                                            <span class="media_label media_label--pricing">
+                                                <span class="price h4 donna_vote"></span>
+                                                votes 
+                                            </span>
+                                        </div>
+                                        <div class="main d-md-flex flex-column justify-content-between flex-grow-1" onclick="openDonna()">
+                                            <a class="main_title h4 vote_designer_name" onclick="openDonna()" data-shave="true">
+                                                Donna Louisa Trusty
+                                            </a>
+                                            <a class="link link--arrow d-inline-flex align-items-center vote_btn" onclick=" openDonna();">
+                                                Vote
+                                                <i class="icon-arrow_right icon"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+
+
+                                
+
+                                <!-- MARTHA -->
+                                <li class="rooms_list-item col-md-6 col-xl-4" data-order="1" data-aos="fade-up">
+                                    <div class="item-wrapper d-md-flex flex-column">
+                                        <div class="media">
+                                            <picture>
+                                                <source data-srcset="img/martha.jpg" srcset="img/martha.jpg" />
+                                                <img class="lazy" data-src="img/martha.jpg" src="img/martha.jpg" alt="media" />
+                                            </picture>
+                                            <span class="media_label media_label--pricing">
+                                                <span class="price h4 martha_vote"></span>
+                                                votes 
+                                            </span>
+                                        </div>
+                                        <div class="main d-md-flex flex-column justify-content-between flex-grow-1">
+                                            <a class="main_title h4 vote_designer_name" onclick="voteFor('martha')" data-shave="true">
+                                                Martha Zorana Zaab
+                                            </a>
+                                            <a class="link link--arrow d-inline-flex align-items-center vote_btn" onclick="voteFor('martha')">
+                                                Vote
+                                                <i class="icon-arrow_right icon"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                
+                                
+
+                                
+
+                                
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section class="room_comments col-lg-8">
+                        <h3 class="room_comments-header">  Comments  </h3>
+                        <ul class="room_comments-list">
+                            
+                            <li class="list-item d-flex flex-column flex-sm-row align-items-start">
+                                <div class="media">
+                                    <picture>
+                                        <source data-srcset="img/ascot.png" srcset="img/ascot.png" />
+                                        <img class="lazy" data-src="img/ascot.png" src="img/ascot.png" alt="media" />
+                                    </picture>
+                                </div>
+
+                                <div class="main">
+                                    <div class="main_info d-flex flex-column">
+                                        <span class="name h4">Evelyn Summers</span>
+                                        <span class="date">April 7, 2024</span>
+                                    </div>
+                                    <p class="text">
+                                        I think davene understands what you want and delivers exactly what you want 
+                                        She's one of them !
+                                    </p>
+                                </div>
+                                
+                            </li>
+                            
+                            <li class="list-item d-flex flex-column flex-sm-row align-items-start">
+                                <div class="media">
+                                    <picture>
+                                        <source data-srcset="img/ascot.png" srcset="img/ascot.png" />
+                                        <img class="lazy" data-src="img/ascot.png" src="img/ascot.png" alt="media" />
+                                    </picture>
+                                </div>
+
+                                <div class="main">
+                                    <div class="main_info d-flex flex-column">
+                                        <span class="name h4"> Lucas Harper</span>
+                                        <span class="date">April 7, 2024</span>
+                                    </div>
+                                    <p class="text">
+                                        James designs are nothing short of breathtaking! I recently purchased
+                                        a stunning necklace from his collection and I've received countless 
+                                        compliments every time I wear it. His attention to detail and craftmanship truly 
+                                        set his pieces apart. 
+                                    </p>
+                                </div>
+                                
+                            </li>
+
+                            <li class="list-item d-flex flex-column flex-sm-row align-items-start">
+                                <div class="media">
+                                    <picture>
+                                        <source data-srcset="img/ascot.png" srcset="img/ascot.png" />
+                                        <img class="lazy" data-src="img/ascot.png" src="img/ascot.png" alt="media" />
+                                    </picture>
+                                </div>
+
+                                <div class="main">
+                                    <div class="main_info d-flex flex-column">
+                                        <span class="name h4">Jasmine Rodriquez</span>
+                                        <span class="date">April 6 2024</span>
+                                    </div>
+                                    <p class="text">
+                                        I am absolutely in love with the ring I bought from Davene. The intricate design and 
+                                        exquisite gemstones make it a true work of art. I couldn't be happier with my purchase 
+                                        and I can't wait to add more of his creations to my collection!
+                                    </p>
+                                </div>
+                                
+                            </li>
+
+                            <li class="list-item d-flex flex-column flex-sm-row align-items-start">
+                                <div class="media">
+                                    <picture>
+                                        <source data-srcset="img/ascot.png" srcset="img/ascot.png" />
+                                        <img class="lazy" data-src="img/ascot.png" src="img/ascot.png" alt="media" />
+                                    </picture>
+                                </div>
+
+                                <div class="main">
+                                    <div class="main_info d-flex flex-column">
+                                        <span class="name h4"> Alexander Blake </span>
+                                        <span class="date">April 5 2024</span>
+                                    </div>
+                                    <p class="text">
+                                        I ordered the Goddess leggings and Strappy Fitness Bralette. I have no complaints with the goddess leggings as they arrived just over the 2 weeks described and they came exactly as advertised. However, I paid extra for shipping to receive the bralette also within 2 weeks and it arrived 4 weeks later! It was also a completely different color than advertised on the website. I ordered the magenta but it turned out to be more of a light pink. If it were any other company I would exchange this for a different color but dealing with them was such a pain that i'm just going to have to live with it.
+                                    </p>
+                                </div>
+                                
+                            </li>
+
+                            <li class="list-item d-flex flex-column flex-sm-row align-items-start">
+                                <div class="media">
+                                    <picture>
+                                        <source data-srcset="img/ascot.png" srcset="img/ascot.png" />
+                                        <img class="lazy" data-src="img/ascot.png" src="img/ascot.png" alt="media" />
+                                    </picture>
+                                </div>
+
+                                <div class="main">
+                                    <div class="main_info d-flex flex-column">
+                                        <span class="name h4"> Harper Smith </span>
+                                        <span class="date">April 5 2024</span>
+                                    </div>
+                                    <p class="text">
+                                        I admire Donna not only for her incredible talent as a designer 
+                                        but also for her commitment to sustainability. Her use of ethically 
+                                        sourced materials and eco-friendly practices sets her apart in the industry.
+
+                                    </p>
+                                </div>
+                                
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+            <!-- room section start -->
+            
+        </main>
+        <footer class="footer accent">
+            <div class="container">
+                <div class="footer_main d-sm-flex flex-wrap flex-lg-nowrap justify-content-between">
+                    <div class="footer_main-block footer_main-block--about col-sm-7 col-lg-auto d-flex flex-column">
+                        <a class="brand d-flex align-items-center" href="index.html">
+                            <span class="brand_logo theme-element">
+                                <svg
+                                    id="brandFooter"
+                                    width="22"
+                                    height="23"
+                                    viewBox="0 0 22 23"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M7.03198 3.80281V7.07652L3.86083 9.75137L0.689673 12.4263L0.667474 6.56503C0.655304 3.34138 0.663875 0.654206 0.686587 0.593579C0.71907 0.506918 1.4043 0.488223 3.87994 0.506219L7.03198 0.529106V3.80281ZM21.645 4.36419V5.88433L17.0383 9.76316C14.5046 11.8966 11.2263 14.6552 9.75318 15.8934L7.07484 18.145V20.3225V22.5H3.85988H0.64502L0.667303 18.768L0.689673 15.036L2.56785 13.4609C3.60088 12.5946 6.85989 9.85244 9.81009 7.36726L15.1741 2.84867L18.4096 2.8464L21.645 2.84413V4.36419ZM21.645 15.5549V22.5H18.431H15.217V18.2638V14.0274L15.4805 13.7882C15.8061 13.4924 21.5939 8.61606 21.6236 8.61248C21.6353 8.61099 21.645 11.7351 21.645 15.5549Z"
+                                        fill="currentColor"
+                                    />
+                                </svg>
+                            </span>
+                            <span class="brand_name">Ascot Jewelers</span>
+                        </a>
+                        <p class="footer_main-block_text">
+                            We make it all from scratch - design to final polish. We can reuse your gold and gems to make a new piece of art if you have a heirloom, sentimental or other jewelry, or can create a brand new jewelry that will match your likes and imagination.
+                        </p>
+                    </div>
+                    <div class="footer_main-block footer_main-block--nav col-sm-6 col-lg-auto">
+                        <h4 class="footer_main-block_header">Quick links</h4>
+                        <ul class="footer_main-block_nav d-flex flex-lg-column">
+                            <li class="list-item">
+                                <a class="link underlined underlined--white nav-item" data-page="home" href="index.html">Home</a>
+                            </li>
+                            <li class="list-item">
+                                <a class="link underlined underlined--white nav-item" data-page="Necklace" href="#Necklace">Necklace</a>
+                            </li>
+                            <li class="list-item">
+                                <a class="link underlined underlined--white nav-item" data-page="Bracelet" href="#Bracelet">Bracelet</a>
+                            </li>
+                            <li class="list-item">
+                                <a class="link underlined underlined--white nav-item" data-page="Ring" href="#Ring">Ring</a>
+                            </li>
+                            <li class="list-item">
+                                <a class="link underlined underlined--white nav-item" data-page="Team" href="#Team">Our Team</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_main-block footer_main-block--contacts col-sm-5 col-lg-auto">
+                        <h4 class="footer_main-block_header">Contact Us</h4>
+                        <ul class="footer_main-block_contacts">
+                            <li class="list-item d-flex">
+                                <i class="icon-location icon"></i>
+                                <p class="wrapper">
+                                    <span class="linebreak"> 944 Main St, </span>
+                                    <span class="linebreak"> Evanston, WY 82930 </span>
+                                </p>
+                            </li>
+                            <li class="list-item d-flex">
+                                <span class="icon-call icon">
+                                    <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M26.9609 19.75L21 17.1797C20.7812 17.125 20.5625 17.0703 20.3438 17.0703C19.7969 17.0703 19.3047 17.2891 19.0312 17.6719L16.625 20.625C12.7969 18.7656 9.73438 15.7031 7.875 11.875L10.8281 9.46875C11.2109 9.19531 11.4297 8.70312 11.4297 8.15625C11.4297 7.9375 11.375 7.71875 11.3203 7.5L8.75 1.53906C8.47656 0.9375 7.875 0.5 7.21875 0.5C7.05469 0.5 6.94531 0.554688 6.83594 0.554688L1.3125 1.86719C0.546875 2.03125 0 2.6875 0 3.50781C0 17.3438 11.2109 28.5 24.9922 28.5C25.8125 28.5 26.4688 27.9531 26.6875 27.1875L27.9453 21.6641C27.9453 21.5547 27.9453 21.4453 27.9453 21.2812C27.9453 20.625 27.5625 20.0234 26.9609 19.75ZM24.9375 26.75C12.1406 26.75 1.75 16.3594 1.75 3.5625L7.16406 2.30469L9.67969 8.15625L5.6875 11.4375C8.36719 17.0703 11.4297 20.1328 17.1172 22.8125L20.3438 18.8203L26.1953 21.3359L24.9375 26.75Z"
+                                            fill="currentColor"
+                                        />
+                                    </svg>
+                                </span>
+                                <p class="wrapper d-flex flex-column">
+                                    <a class="link" href="tel:+1234567890">(329) 580-7077</a>
+                                    <a class="link" href="tel:+1234567890">(650) 382-5020</a>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_main-block footer_main-block--follow col-sm-5 col-lg-auto d-flex flex-column">
+                        <h4 class="footer_main-block_header">Follow Us</h4>
+                        <p class="footer_main-block_text">Stay up-to-date on our latest projects and events</p>
+                        <ul class="socials d-flex align-items-center">
+                            <li class="list-item">
+                                <a class="link" href="#">
+                                    <i class="icon-facebook"></i>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a class="link" href="#">
+                                    <i class="icon-instagram"></i>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a class="link" href="#">
+                                    <i class="icon-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a class="link" href="#">
+                                    <i class="icon-whatsapp"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_copyright">
+                <div class="container">
+                    <p class="footer_copyright-text">
+                        <span class="linebreak">Ascot Jewelers &copy; Ascot Group</span>
+                        <span class="linebreak">All rights reserved Copyrights 2024</span>
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <script>
+
+            var VOTEFOR;
+            $(document).ready(function(){
+                var firebaseConfig = {
+                    apiKey: "AIzaSyCKnX0w115NGUzMJFGR0BJLtAizU13vViU",
+                    authDomain: "ecommerce-6471f.firebaseapp.com",
+                    projectId: "ecommerce-6471f",
+                    storageBucket: "ecommerce-6471f.appspot.com",
+                    messagingSenderId: "52948024336",
+                    appId: "1:52948024336:web:b82d9ae41eaa06072b9e95"   
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+
+                $('.login_password_input, .login_email_input').keydown(function (e) {
+                    if (e.keyCode == 13) {
+                        alert('you pressed enter ^_^');      
+                    }
+                })
+                
+            $("form").submit(
+                function(e){
+                    e.preventDefault();
+                }
+            );
+
+            //insertData('kattywhite');
+            getData('davidhoward');
+            getData('victoriamuller');
+            getData('marthazaab');
+            getData('kattywhite');
+            });
+
+            function insertData(docc){
+                // Add a new document in collection "cities"
+                    firebase.firestore().collection("DESIGNERS").doc(docc).set({
+                        name: "Los Angeles",
+                        vote: 125
+                    })
+                    .then(() => {
+                        console.log("Document successfully written!");
+                    })
+                    .catch((error) => {
+                        console.error("Error writing document: ", error);
+                    });                                     
+            }
+
+            function getData(docc){
+                var designerName,vote;
+                var docRef = firebase.firestore().collection("DESIGNERS").doc(docc);
+
+                docRef.get().then((doc) => {
+                    if (doc.exists) {
+                        console.log("Document data:", doc.data());
+                        if(docc=='davidhoward'){
+                            console.log('yeah');
+                            $('.david_vote').text(doc.data().vote);
+                            //$('#david_votes_count').text(123);
+
+                        }
+                        if(docc=='kattywhite'){
+                            $('.katty_vote').text(doc.data().vote);
+                        }
+                        if(docc=='marthazaab'){
+                            $('.martha_vote').text(doc.data().vote);
+                        }
+                        if(docc=='victoriamuller'){
+                            $('.vicky_vote').text(doc.data().vote);
+                        }
+                    } else {
+                        // doc.data() will be undefined in this case
+                        console.log("No such document!");
+                    }
+                }).catch((error) => {
+                    console.log("Error getting document:", error);
+                });                         
+            }
+
+            function voteFor(who){
+                $('.votedForWho').text(who);
+                if (who == 'davene') {
+                    VOTEFOR = 'davene';
+                    $('.VOTER_INFO').removeClass('ghide');
+                }
+                if (who == 'david') {
+                    VOTEFOR = 'david';
+                    $('.VOTER_INFO').removeClass('ghide');
+                }
+                if (who == 'donna') {
+                    VOTEFOR = 'donna';
+                    $('.VOTER_INFO').removeClass('ghide');
+                }
+                if (who == 'victoria') {
+                    VOTEFOR = 'victoria';
+                    $('.VOTER_INFO').removeClass('ghide');
+                }
+                if (who == 'katty') {
+                    VOTEFOR = 'katty';
+                    $('.VOTER_INFO').removeClass('ghide');
+                }
+                if (who == 'martha') {
+                    VOTEFOR = 'martha';
+                    $('.VOTER_INFO').removeClass('ghide');
+                }
+                
+            }
+            
+function openDonna(){
+    $('.votedForWho').text('Donna');
+    VOTEFOR = 'donna';
+    $('.VOTER_INFO').removeClass('ghide');
+
+}
+
+            function submitVoterInfo(){
+                var firstName = $('#voter_first_name').val();
+                var lastName = $('#voter_last_name').val();
+                var email = $('#voter_email').val();
+                var homeAddress = $('#voter_home_address').val();
+                var message = $('#voter_message').val();
+
+                
+                if(VOTEFOR == 'david'){
+                    $('#voter_chosen').text('David');
+                    saveVote(firstName, lastName,email,homeAddress,message,VOTEFOR);
+                }
+                if(VOTEFOR == 'davene'){
+                    $('#voter_chosen').text('Davene');
+                    saveVote(firstName, lastName,email,homeAddress,message,VOTEFOR);
+                }
+            }
+
+            function saveVote(fn,ln,email,homeAddress,message,who){
+                    
+                if (fn != '' || email != '' || homeAddress != '') {
+                        $('#submit_voter_btn').hide();
+                        firebase.firestore().collection("VOTERS").doc(fn+ln).set({
+                            fname: fn,
+                            lname: ln,
+                            email: email,
+                            home_address: homeAddress,
+                            message: message,
+                            voteFor: who,
+                            vote: 1
+                        })
+                        .then(() => {
+                            console.log("Voter successfully written!");
+                            $('#submit_voter_btn').show();
+                            voteProcessUI();
+                        })
+                        .catch((error) => {
+                            console.error("Error writing Voter: ", error);
+                            $('#submit_voter_btn').show();
+                        }); 
+                    } else {
+                        alert('Please fill the input fields above...');
+                    }
+
+                                                        
+            }
+
+            function voteProcessUI(who){
+                $('.form_card').hide();
+                $('.vote-loading').removeClass('ghide');
+                
+                setTimeout(
+                    function(){
+                        $('.vote-loading').addClass('ghide');
+                        $('.vote-confirmed').removeClass('ghide');
+                        $('.voted_for_david').removeClass('ghide');
+
+                        if (who == 'victoria') {
+                            
+                        }
+                        
+                    },4000
+                );
+            }
+       
+            function moveToAwards(){
+                window.location.href = "awards.html";
+
+            }
+       
+       
+function openDonna(){
+    $('.votedForWho').text('Donna');
+    VOTEFOR = 'donna';
+    $('.VOTER_INFO').removeClass('ghide');
+
+}
+
+function submitVoterInfo(){
+    var firstName = $('#voter_first_name').val();
+    var lastName = $('#voter_last_name').val();
+    var email = $('#voter_email').val();
+    var homeAddress = $('#voter_home_address').val();
+    var message = $('#voter_message').val();
+
+    if (firstName != '' && email != '' 
+    && homeAddress != '' && message != '') {
+        
+    }
+
+
+    if(VOTEFOR == 'james'){
+        $('#voter_chosen').text('James');
+        saveVote(firstName, lastName,email,homeAddress,message,VOTEFOR);
+    }
+    if(VOTEFOR == 'davene'){
+        $('#voter_chosen').text('Davene');
+        saveVote(firstName, lastName,email,homeAddress,message,VOTEFOR);
+    }
+    if(VOTEFOR == 'david'){
+        $('#voter_chosen').text('David');
+        saveVote(firstName, lastName,email,homeAddress,message,VOTEFOR);
+    }
+    if(VOTEFOR == 'donna'){
+        $('#voter_chosen').text('Donna Louisa Trusty');
+        saveVote(firstName, lastName,email,homeAddress,message,VOTEFOR);
+    }
+}
+
+function saveVote(fn,ln,email,homeAddress,message,who){
+        
+    if (fn != '' || email != '' || homeAddress != '' || message != '') {
+            $('#submit_vot er_btn').hide();
+            firebase.firestore().collection("VOTERS").doc(fn+ln).set({
+                fname: fn,
+                lname: ln,
+                email: email,
+                home_address: homeAddress,
+                message: message,
+                voteFor: who,
+                vote: 1
+            })
+            .then(() => {
+                console.log("Voter successfully written!");
+                $('#submit_voter_btn').show();
+                voteProcessUI();
+            })
+            .catch((error) => {
+                console.error("Error writing Voter: ", error);
+                $('#submit_voter_btn').show();
+            }); 
+        } else {
+            alert('Please fill the input fields above...');
+        }
+
+                                            
+}
+
+function voteProcessUI(){
+    $('.form_card').hide();
+    $('.vote-loading').removeClass('ghide');
+    
+    setTimeout(
+        function(){
+            $('.vote-loading').addClass('ghide');
+            $('.vote-confirmed').removeClass('ghide');
+            $('.voted_for_david').removeClass('ghide');
+            
+        },4000
+    );
+}
+
+function getUserIpAddress(){
+    $.getJSON("http://freegeoip.net/json/", function (data) {
+    var country = data.country_name;
+    var ip = data.ip;
+
+    console.log(country);
+    });
+}
+       
+       </script>
+        <script src="js/common.min.js"></script>
+        <script src="js/room.min.js"></script>
+        <!-- <script src="GOD.js"></script> -->
+        <script src="God.js"></script>
+    </body>
+</html>

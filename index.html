@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Luxury Jewelry | Ascot Jewelers | Wyoming </title>
+        <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+        
+        <script id="www-widgetapi-script" src="https://s.ytimg.com/yts/jsbin/www-widgetapi-vflS50iB-/www-widgetapi.js" async=""></script>
+
+        <link rel="stylesheet preload" as="style" href="css/preload.min.css" />
+        <link rel="stylesheet preload" as="style" href="css/libs.min.css" />
+        <link rel="shortcut icon" href="img/ascot.png">
+        <link rel="stylesheet" href="css/index.min.css" />
+        <link rel="stylesheet" href="masternb.css">
+
+         <!-- Compiled and minified JavaScript -->
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="end_of_life_ hide"></div>
+        <header class="header d-flex align-items-center" data-page="home">
+            <div class="container position-relative d-flex justify-content-between align-items-center">
+                <a class="brand d-flex align-items-center" href="index.html">
+                    <span class="brand_logo theme-element">
+                        <svg id="brandHeader" width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M7.03198 3.80281V7.07652L3.86083 9.75137L0.689673 12.4263L0.667474 6.56503C0.655304 3.34138 0.663875 0.654206 0.686587 0.593579C0.71907 0.506918 1.4043 0.488223 3.87994 0.506219L7.03198 0.529106V3.80281ZM21.645 4.36419V5.88433L17.0383 9.76316C14.5046 11.8966 11.2263 14.6552 9.75318 15.8934L7.07484 18.145V20.3225V22.5H3.85988H0.64502L0.667303 18.768L0.689673 15.036L2.56785 13.4609C3.60088 12.5946 6.85989 9.85244 9.81009 7.36726L15.1741 2.84867L18.4096 2.8464L21.645 2.84413V4.36419ZM21.645 15.5549V22.5H18.431H15.217V18.2638V14.0274L15.4805 13.7882C15.8061 13.4924 21.5939 8.61606 21.6236 8.61248C21.6353 8.61099 21.645 11.7351 21.645 15.5549Z"
+                                fill="currentColor"
+                            />
+                        </svg>
+                    </span>
+                    <span class="brand_name">Ascot Jewelers</span>
+                </a>
+                <div class="header_offcanvas offcanvas offcanvas-end" id="menuOffcanvas">
+                    <div class="header_offcanvas-header d-flex justify-content-between align-content-center">
+                        <a class="brand d-flex align-items-center" href="index.html">
+                            <span class="brand_logo theme-element">
+                                <svg
+                                    id="brandOffset"
+                                    width="22"
+                                    height="23"
+                                    viewBox="0 0 22 23"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M7.03198 3.80281V7.07652L3.86083 9.75137L0.689673 12.4263L0.667474 6.56503C0.655304 3.34138 0.663875 0.654206 0.686587 0.593579C0.71907 0.506918 1.4043 0.488223 3.87994 0.506219L7.03198 0.529106V3.80281ZM21.645 4.36419V5.88433L17.0383 9.76316C14.5046 11.8966 11.2263 14.6552 9.75318 15.8934L7.07484 18.145V20.3225V22.5H3.85988H0.64502L0.667303 18.768L0.689673 15.036L2.56785 13.4609C3.60088 12.5946 6.85989 9.85244 9.81009 7.36726L15.1741 2.84867L18.4096 2.8464L21.645 2.84413V4.36419ZM21.645 15.5549V22.5H18.431H15.217V18.2638V14.0274L15.4805 13.7882C15.8061 13.4924 21.5939 8.61606 21.6236 8.61248C21.6353 8.61099 21.645 11.7351 21.645 15.5549Z"
+                                        fill="currentColor"
+                                    />
+                                </svg>
+                            </span>
+                            <span class="brand_name">As</span>
+                        </a>
+                        <button class="close" type="button" data-bs-dismiss="offcanvas">
+                            <i class="icon-close--entypo"></i>
+                        </button>
+                    </div>
+                    <nav class="header_nav">
+                        <ul class="header_nav-list">
+                            <li class="header_nav-list_item">
+                                <a class="nav-item" href="index.html" data-page="home">Home</a>
+                            </li>
+                            <li class="header_nav-list_item">
+                                <a class="nav-item" href="#Ring" data-page="about">Ring</a>
+                            </li>
+                            <li class="header_nav-list_item">
+                                <a class="nav-item" href="#Necklace" data-page="about">Necklace</a>
+                            </li>
+                            <li class="header_nav-list_item">
+                                <a class="nav-item" href="#Bracelet" data-page="about">Bracelet</a>
+                            </li>
+                                <a class="nav-item" href="team.html" data-page="about">Our Team</a>
+                            </li>
+                            <li class="header_nav-list_item">
+                                <a
+                                    class="nav-link nav-link--contacts  d-inline-flex align-items-center"
+                                    href="contacts.html"
+                                   
+                                >
+                                    Contacts
+                                    <i class="icon-chevron_down--entypo icon"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul class="socials d-flex align-items-center">
+                        <li class="list-item">
+                            <a class="link" href="#">
+                                <i class="icon-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a class="link" href="#">
+                                <i class="icon-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a class="link" href="#">
+                                <i class="icon-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a class="link" href="#">
+                                <i class="icon-whatsapp"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <button class="header_trigger d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuOffcanvas">
+                    <i class="icon-stream"></i>
+                </button>
+            </div>
+        </header>
+        <!-- homepage content start -->
+        <main>
+            <!-- hero section start -->
+            <section class="hero section">
+                <div class="container container--hero d-lg-flex align-items-center justify-content-between">
+                    <div class="hero_main">
+                        <h1 class="hero_main-title" data-aos="fade-up">
+                            From the Source
+                        </h1>
+                        <div class="hero_main-content d-flex">
+                            <span class="line" data-aos="fade-up" data-aos-delay="50"></span>
+                            <p class="text" data-aos="fade-up" data-aos-delay="100">
+                                Handcrafting the world’s best diamonds starts with knowing where they come from. We proudly trace 100% of our rough diamonds to known mines and sources.
+                            </p>
+                        </div>
+                        <form class="booking" action="#" method="post" autocomplete="off" data-type="booking" data-aos="fade-up">
+                            <div class="item-wrapper d-sm-flex flex-wrap flex-lg-nowrap align-items-lg-center">
+                                
+                                <button onclick="moveToAwards();" class="booking_btn btn theme-element theme-element--accent" type="submit"> 
+                                    <a href="team.html">Follow Your Diamond's Journey</a> 
+                                </button>
+                            </div>
+                        </form>
+                        
+                    </div>
+                    <div class="hero_media" data-aos="zoom-in">
+                        <picture>
+                            <source data-srcset="img/desginer.jpg" srcset="img/desginer.jpg" />
+                            <img  class="lazy" data-src="img/desginer.jpg" src="img/desginer.jpg" alt="media" />
+                        </picture>
+                    </div>
+                </div>
+            </section>
+            <!-- hero section end -->
+            <!-- RINGS section start -->
+            <section class="rooms section--blockbg section--nopb">
+                <div class="block"></div>
+                <div class="container">
+                    <div class="rooms_header d-sm-flex justify-content-between align-items-center">
+                        <h2 class="rooms_header-title" data-aos="fade-right" id="Ring">Rings</h2>
+                        <div class="wrapper" data-aos="fade-left">
+                        </div>
+                    </div>
+                    <ul class="rooms_list d-md-flex flex-wrap">
+                        <li  class="rooms_list-item col-md-6 col-xl-4" data-order="1" data-aos="fade-up">
+                            <div class="item-wrapper d-md-flex flex-column">
+                                <div class="media">
+                                    <picture>
+                                        <source data-srcset="img/emerald.jpg" srcset="img/emerald.jpg" />
+                                        <img class="lazy" data-src="img/emerald.jpg" src="img/emerald.jpg" alt="media" />
+                                    </picture>
+                                    <span class="media_label media_label--pricing">
+                                        <span class="price h4">$1,089.00</span>
+                                    </span>
+                                </div>
+                                <div class="main d-md-flex flex-column justify-content-between flex-grow-1">
+                                    <a class="main_title h4"  data-shave="true">
+                                        Rivulet Spread 18kt gold ring with emeralds
+                                    </a>
+                                    <div>
+                                        Ascot Spread ring will stack perfectly alongside more minimal designs. It's crafted in the label's native Greece from 18kt yellow gold, and set with 0.51ctw baguette- and round-cut emeralds in a prong setting.
+                                    </div>
+                                    <br><hr>
+                                    <div class="main_amenities">
+                                        <span class="main_amenities-item d-inline-flex align-items-center">
+                                            <i class="icon-user icon nb_hide"></i>
+                                            material: 18kt yellow gold
+                                        </span>
+                                        <span class="main_amenities-item d-inline-flex align-items-center">
+                                            <i class="icon-bunk_bed icon nb_hide"></i>
+                                            stone: emeralds (0.51ctw), baguette and round-cut, prong-set
+
+                                        </span>
+                                    </div>
+                                    <a class="link link--arrow d-inline-flex align-items-center" href="team.html">
+                                        See availability
+                                        <i class="icon-arrow_right icon"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="rooms_list-item col-md-6 col-xl-4" data-order="1" data-aos="fade-up">
+                            <div class="item-wrapper d-md-flex flex-column">
+                                <div class="media">
+                                    <picture>
+                                        <source data-srcset="img/emerald1.jpg" srcset="img/emerald1.jpg" />
+                                        <img class="lazy" data-src="img/emerald1.jpg" src="img/emerald1.jpg" alt="media" />
+                                    </picture>
+                                    <span class="media_label media_label--pricing">
+                                        <span class="price h4">$26,454.00</span>
+                                    </span>
+                                </div>
+                                <div class="main d-md-flex flex-column justify-content-between flex-grow-1">
+                                    <a class="main_title h4" href="#" data-shave="true">
+                                        ASCRAGNEL
+                                    </a>
+                                    <div>
+                                        ASCRAGNEL draws inspiration from New York’s 1930s skyline with its Manhattan collection presenting this large 18kt yellow gold ring that features sparkling rows of emeralds that conjure up images of the American capital’s shimmering glass towers.
+                                    </div>
+                                    <br><hr>
+                                    <div class="main_amenities">
+                                        <span class="main_amenities-item d-inline-flex align-items-center">
+                                            <i class="icon-user icon nb_hide"></i>
+                                            material: 18kt yellow gold
+                                        </span>
+                                        <span class="main_amenities-item d-inline-flex align-items-center">
+                                            <i class="icon-bunk_bed icon nb_hide"></i>
+                                            stone: 5.08ct brilliant cut emeralds
+
+                                        </span>
+                                    </div>
+                                    <a class="link link--arrow d-inline-flex align-items-center" href="team.html">
+                                        See availability
+                                        <i class="icon-arrow_right icon"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="rooms_list-item col-md-6 col-xl-4" data-order="1" data-aos="fade-up">
+                            <div class="item-wrapper d-md-flex flex-column">
+                                <div class="media">
+                                    <picture>
+                                        <source data-srcset="img/emerald3.jpg" srcset="img/emerald3.jpg" />
+                                        <img class="lazy" data-src="img/emerald3.jpg" src="img/emerald3.jpg" alt="media" />
+                                    </picture>
+                                    <span class="media_label media_label--pricing">
+                                        <span class="price h4">$60,906.00</span>
+                                    </span>
+                                </div>
+                                <div class="main d-md-flex flex-column justify-content-between flex-grow-1">
+                                    <a class="main_title h4" href="#" data-shave="true">
+                                        Ascot Vintage
+                                    </a>
+                                    <div>
+                                        Ascot Vintage taking its influences from Ancient Egypt, India and Persia, This jewellery was characterised by sharp edges and clean lines. Set in platinum, this sophisticated cocktail ring is surrounded by shimmering diamonds and detailed with a green 5.02ct Colombian cabochon emerald that takes centre stage.
+                                    </div>
+                                    <br><hr>
+                                    <div class="main_amenities">
+                                        <span class="main_amenities-item d-inline-flex align-items-center">
+                                            <i class="icon-user icon nb_hide"></i>
+                                            material: Onyx, Diamond, Emerald, Platinum
+                                        </span>
+                                        <span class="main_amenities-item d-inline-flex align-items-center">
+                                            <i class="icon-bunk_bed icon nb_hide"></i>
+                                            stone: 5.02ct Colombian cabochon emerald
+
+                                        </span>
+                                    </div>
+                                    <a class="link link--arrow d-inline-flex align-items-center" href="team.html">
+                                        See availability
+                                        <i class="icon-arrow_right icon"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="rooms_list-item col-md-6 col-xl-4" data-order="1" data-aos="fade-up">
+                            <div class="item-wrapper d-md-flex flex-column">
+                                <div class="media">
+                                    <picture>
+                                        <source data-srcset="img/emerald4.jpg" srcset="img/emerald4.jpg" />
+                                        <img class="lazy" data-src="img/emerald4.jpg" src="img/emerald4.jpg" alt="media" />
+                                    </picture>
+                                    <span class="media_label media_label--pricing">
+                                        <span class="price h4">$22,109.00</span>
+                                    </span>
+                                </div>
+                                <div class="main d-md-flex flex-column justify-content-between flex-grow-1">
+                                    <a class="main_title h4" href="#" data-shave="true">
+                                        Ascot Vintage
+                                    </a>
+                                    <div>
+                                        This sculptural cocktail ring is considered a true statement piece. Set in 18-karat gold this piece features a central oval 5.14ct vivid green jadeite cabochon that is surrounded by an Art Deco inspired plaque adorned with old cut white diamonds.
+                                    </div>
+                                    <br><hr>
+                                    <div class="main_amenities">
+                                        <span class="main_amenities-item d-inline-flex align-items-center">
+                                            <i class="icon-user icon nb_hide"></i>
+                                            material: 18kt White Gold, 18kt Yellow Gold, Diamond, Jade
+                                        </span>
+                                        <span class="main_amenities-item d-inline-flex align-items-center">
+                                            <i class="icon-bunk_bed icon nb_hide"></i>
+                                            stone: Diamond 100%, 24kt Gold 100%, Amethyst 100%
+
+                                        </span>
+                                    </div>
+                                    <a class="link link--arrow d-inline-flex align-items-center" href="team.html">
+                                        See availability
+                                        <i class="icon-arrow_right icon"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="rooms_list-item col-md-6 col-xl-4" data-order="1" data-aos="fade-up">
+                            <div class="item-wrapper d-md-flex flex-column">
+                                <div class="media">
+                                    <picture>
+                                        <source data-srcset="img/emerald5.jpg" srcset="img/emerald5.jpg" />
+                                        <img class="lazy" data-src="img/emerald5.jpg" src="img/emerald5.jpg" alt="media" />
+                                    </picture>
+                                    <span class="media_label media_label--pricing">
+                                        <span class="price h4">$9,037.00</span>
+                                    </span>
+                                </div>
+                                <div class="main d-md-flex flex-column justify-content-between flex-grow-1">
+                                    <a class="main_title h4" href="#" data-shave="true">
+                                        Astra Vintage
+                                    </a>
+                                    <div>
+                                        This Jewelry is well-known for showcasing strong geometric forms and this ring is no exception. 
+                                        Constructed from platinum and engraved with scrollwork patterns, this ring sets a square-cut diamond 
+                                        and a rich green emerald side by side, surrounded by round cut diamonds. 
+                                    </div>
+                                    <br><hr>
+                                    <div class="main_amenities">
+                                        <span class="main_amenities-item d-inline-flex align-items-center">
+                                            <i class="icon-user icon nb_hide"></i>
+                                            material: circa 1911-1940, platinum, engraved detail, square cut diamond with 1.01ct,square cut emerald with 0.98ct
+
+                                        </span>
+                                        <span class="main_amenities-item d-inline-flex align-items-center">
+                                            <i class="icon-bunk_bed icon nb_hide"></i>
+                                            stone: Diamond 
+
+                                        </span>
+                                    </div>
+                                    <a class="link link--arrow d-inline-flex align-items-center" href="team.html">
+                                        See availability
+                                        <i class="icon-arrow_right icon"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="rooms_list-item col-md-6 col-xl-4" data-order="1" data-aos="fade-up">
+                            <div class="item-wrapper d-md-flex flex-column">
+                                <div class="media">
+                                    <picture>
+                                        <source data-srcset="img/emerald6.jpg" srcset="img/emerald6.jpg" />
+                                        <img class="lazy" data-src="img/emerald6.jpg" src="img/emerald6.jpg" alt="media" />
+                                    </picture>
+                                    <span class="media_label media_label--pricing">
+                                        <span class="price h4">$47,371.00</span>
+                                    </span>
+                                </div>
+                                <div class="main d-md-flex flex-column justify-content-between flex-grow-1">
+                                    <a class="main_title h4" href="#" data-shave="true">
+                                        Astra Vintage CL
+                                    </a>
+                                    <div>
+                                        It captures the bright colour combinations and eye-catching statement pieces of the 1960s with this striking, retro design. Expertly crafted in 18kt yellow and platinum, a majestic and tactile sapphire catches the eye with its domed polished candy like form and rich blue colour, whilst the contrasting vibrant green emeralds and sparkling colourless diamonds complete this stunning cocktail ring. 
+                                    </div>
+                                    <br><hr>
+                                    <div class="main_amenities">
+                                        <span class="main_amenities-item d-inline-flex align-items-center">
+                                            <i class="icon-user icon nb_hide"></i>
+                                            material: 18kt yellow gold and platinum Retro sapphire, diamond and emerald ring
+                                        </span>
+                                        <span class="main_amenities-item d-inline-flex align-items-center">
+                                            <i class="icon-bunk_bed icon nb_hide"></i>
+                                            stone: 18kt yellow gold/platinum, brilliant cut 3.20ct colourless diamonds, 13.66ct emerald, oval cut 10.46ct sapphire
+
+                                        </span>
+                                    </div>
+                                    <a class="link link--arrow d-inline-flex align-items-center" href="team.html">
+                                        See availability
+                                        <i class="icon-arrow_right icon"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </section>
+            <!-- RINGS section end -->
+
+            <!-- NECKLACE section start -->
+            <section class="rooms section--blockbg section--nopb" id="Necklace">
+                <div class="block"></div>
+                <div class="container">
+                    <div class="rooms_header d-sm-flex justify-content-between align-items-center">
+                        <h2 class="rooms_header-title" data-aos="fade-right">Necklace</h2>
+                        <div class="wrapper" data-aos="fade-left">
+                        </div>
+                    </div>
+                    <ul class="rooms_list d-md-flex flex-wrap">
+                        <li class="rooms_list-item col-md-6 col-xl-4" data-order="1" data-aos="fade-up">
+                            <div class="item-wrapper d-md-flex flex-column">
+                                <div class="media">
+                                    <picture>
+                                        <source data-srcset="img/necklace1.jpg" srcset="img/necklace1.jpg" />
+                                        <img class="lazy" data-src="img/necklace1.jpg" src="img/necklace1.jpg" alt="media" />
+                                    </picture>
+                                    <span class="media_label media_label--pricing">
+                                        <span class="price h4">$750,000.00</span>
+                                    </span>
+                                </div>
+                                <div class="main d-md-flex flex-column justify-content-between flex-grow-1">
+                                    <a class="main_title h4"  data-shave="true">
+                                        Extraordinary Emerald and Fancy Vivid Yellow Diamond Necklace  (80.52Ct TW)
+                                    </a>
+                                    <div>
+                                        A spectacular emerald and fancy vivid yellow diamond necklace mounted in 18K yellow gold. This one of a kind masterpiece features 20 Pear shaped emeralds, along with 32 fancy vivid yellow pear and cushion diamonds, surrounded by fancy vivid yellow round brilliants, all certified by GIA. A mesmerizing showstopper that displays beauty and elegance.  
+                                    </div>
+                                    <br><hr>
+                                    <br>
+                                    <div class="main_amenities">
+                                        <span class="main_amenities-item d-inline-flex align-items-center">
+                                            <i class="icon-user icon nb_hide"></i>
+                                            Metal: 18k  gold
+                                        </span>
+                                        <span class="main_amenities-item d-inline-flex align-items-center">
+                                            <i class="icon-bunk_bed icon nb_hide"></i>
+                                            Clasp: Tongue & Groove Clasp
+                                        </span>
+                                        <span class="main_amenities-item d-inline-flex align-items-center">
+                                            <i class="icon-bunk_bed icon nb_hide"></i>
+                                            Length: 420.00mm
+                                        </span>
+                                        <br><br>
+                                        <hr>
+                                        <div>
+                                            <br>
+                                            Intensity: Fancy Vivid
+                                            Color: Yellow
+                                            Shape: Round
+                                            Total Weight: 3.28Ct
+                                            Clarity: (VS)
+                                            Gem Type: Emerald
+                                            Color: Green
+                                            Shape: Pear
+                                            Total Weight: 64.85Ct
+                                        </div>
+                                    </div>
+                                    <a class="link link--arrow d-inline-flex align-items-center" href="team.html">
+                                        See availability
+                                        <i class="icon-arrow_right icon"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="rooms_list-item col-md-6 col-xl-4" data-order="1" data-aos="fade-up">
+                            <div class="item-wrapper d-md-flex flex-column">
+                                <div class="media">
+                                    <picture>
+                                        <source data-srcset="img/NCKLC.png" srcset="img/NCKLC.png" />
+                                        <img class="lazy" data-src="img/NCKLC.png" src="img/NCKLC.png" alt="media" />
+                                    </picture>
+                                    <span class="media_label media_label--pricing">
+                                        <span class="price h4">$3,995.00</span>
+                                    </span>
+                                </div>
+                                <div class="main d-md-flex flex-column justify-content-between flex-grow-1">
+                                    <a class="main_title h4"  data-shave="true">
+                                        The Finest Natural Colombian Emerald Diamond 19" Necklace 18k Solid Yellow Gold
+                                    </a>
+                                    <div>
+                                        Thank you for coming in! Spectacular 18K solid yellow gold necklace with gem Colombian emerald briolettes and 18K champagne diamond charms! The Diamond is 100% natural, no treatment of any kind. Magnificent finest Colombian emerald smooth pear briolettes with breath-takingly beautiful medium shade blue green color and incredible gem clarity! Cabochon grade emerald in good size! It looks much much nicer in person! Appr. 36.5 carats of gem emerald!
+                                    </div>
+                                    <br><hr>
+                                    <br>
+                                    <div class="main_amenities">
+                                        <span class="main_amenities-item d-inline-flex align-items-center">
+                                            <i class="icon-user icon nb_hide"></i>
+                                            Metal: 18k  gold
+                                        </span>
+                                        <span class="main_amenities-item d-inline-flex align-items-center">
+                                            <i class="icon-bunk_bed icon nb_hide"></i>
+                                            Clasp: Tongue & Groove Clasp
+                                        </span>
+                                        <span class="main_amenities-item d-inline-flex align-items-center">
+                                            <i class="icon-bunk_bed icon nb_hide"></i>
+                                            Length: 420.00mm
+                                        </span>
+                                        <br><br>
+                                        <hr>
+                                        <div>
+                                            <br>
+                                            Intensity: Fancy Vivid
+                                            Color: Yellow
+                                            Shape: Round
+                                            Total Weight: 3.28Ct
+                                            Clarity: (VS)
+                                            Gem Type: Emerald
+                                            Color: Green
+                                            Shape: Pear
+                                            Total Weight: 64.85Ct
+                                        </div>
+                                    </div>
+                                    <a class="link link--arrow d-inline-flex align-items-center" href="team.html">
+                                        See availability
+                                        <i class="icon-arrow_right icon"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="rooms_list-item col-md-6 col-xl-4" data-order="1" data-aos="fade-up">
+                            <div class="item-wrapper d-md-flex flex-column">
+                                <div class="media">
+                                    <picture>
+                                        <source data-srcset="img/necklace3.jpg" srcset="img/necklace3.jpg" />
+                                        <img class="lazy" data-src="img/necklace3.jpg" src="img/necklace3.jpg" alt="media" />
+                                    </picture>
+                                    <span class="media_label media_label--pricing">
+                                        <span class="price h4">$2,187.07</span>
+                                    </span>
+                                </div>
+                                <div class="main d-md-flex flex-column justify-content-between flex-grow-1">
+                                    <a class="main_title h4"  data-shave="true">
+                                        1.20tcw 14K Channel Set Colombian Emerald & Diamond Necklace, Emerald Pendant, Natural Emerald, May's Birthstone, Emerald Solitaire Pendant
+                                    </a>
+                                    <div>
+                                        Displayed is a gorgeous 1.20tcw natural Colombian emerald and diamond pendant. This is quite the 
+                                        alluring piece with the most beautiful center stone. The center gemstone is an excellent quality 
+                                        Muzo emerald that is handset in a 14K half bezel. The emerald has an enticing medium green color 
+                                        that is recognized in only Colombian emeralds. This gem has excellent luster and excellent eye 
+                                        clarity. Any imperfection is minimal but is known to add ambiance and character to the stone. 
+                                        Ever so beautiful, a large 10pt diamond is placed delicately above the emerald in a yellow gold 
+                                        bezel. The bale is large enough to accommodate thick chains, the chain is sold separately. This 
+                                        beauty is ideal for any occasion. Shop now before it's gone.
+                                    </div>
+                                    <br><hr>
+                                    <br>
+                                    <div class="main_amenities">
+                                        <span class="main_amenities-item d-inline-flex align-items-center">
+                                            <i class="icon-user icon nb_hide"></i>
+                                            Setting Style: Bezel
+                                            Gold Pendant Weight: 1.3 Grams
+                                            Setting Material: 14K Yellow Gold Or White Gold
+                                        </span>
+                                        <br><br>
+                                        <hr>
+                                        <div>
+                                            <br>
+                                            Main Stone: Colombian Emerald
+                                            Grade Quality: Excellent
+                                            Shape: Emerald Cut
+                                            Measurements: 5.5 mm X 7.0 mm
+                                            Weight: Approx 1.10 Cts
+                                            Cut: Excellent
+                                            Clarity: Translucent, Excellent
+                                            Hue: Medium
+                                            Color: Medium Green
+                                            Luster: Excellent
+                                        </div>
+                                    </div>
+                                    <a class="link link--arrow d-inline-flex align-items-center" href="team.html">
+                                        See availability
+                                        <i class="icon-arrow_right icon"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </section>
+            <!-- NECKLACE section end -->
+            
+
+            <!-- BRACELET section start -->
+            <section class="rooms section--blockbg section--nopb" id="Bracelet">
+                <div class="block"></div>
+                <div class="container">
+                    <div class="rooms_header d-sm-flex justify-content-between align-items-center">
+                        <h2 class="rooms_header-title" data-aos="fade-right">Bracelet</h2>
+                        <div class="wrapper" data-aos="fade-left">
+                        </div>
+                    </div>
+                    <ul class="rooms_list d-md-flex flex-wrap">
+                        <li class="rooms_list-item col-md-6 col-xl-4" data-order="1" data-aos="fade-up">
+                            <div class="item-wrapper d-md-flex flex-column">
+                                <div class="media">
+                                    <picture>
+                                        <source data-srcset="img/bracelet11.jpg" srcset="img/bracelet11.jpg" />
+                                        <img class="lazy" data-src="img/bracelet11.jpg" src="img/bracelet11.jpg" alt="media" />
+                                    </picture>
+                                    <span class="media_label media_label--pricing">
+                                        <span class="price h4">$750,000.00</span>
+                                    </span>
+                                </div>
+                                <div class="main d-md-flex flex-column justify-content-between flex-grow-1">
+                                    <a class="main_title h4"  data-shave="true">
+                                        Emerald and Diamond Bracelet
+                                    </a>
+                                    <div>
+                                        Flexibly set, featuring 21 oval-shaped emeralds alternating with baguette-cut diamonds.  
+                                    </div>
+                                    <br><hr>
+                                    <br>
+                                    <div class="main_amenities">
+                                        <span class="main_amenities-item d-inline-flex align-items-center">
+                                            <i class="icon-user icon nb_hide"></i>
+                                            Emeralds weighing a total of 6.11 carats
+                                        </span>
+                                        <span class="main_amenities-item d-inline-flex align-items-center">
+                                            <i class="icon-bunk_bed icon nb_hide"></i>
+                                            Diamonds weighing a total of 2.83 carats
+                                        </span>
+                                        <span class="main_amenities-item d-inline-flex align-items-center">
+                                            <i class="icon-bunk_bed icon nb_hide"></i>
+                                            Length: 7 inches
+                                        </span>
+                                    </div>
+                                    <a class="link link--arrow d-inline-flex align-items-center" href="team.html">
+                                        See availability
+                                        <i class="icon-arrow_right icon"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="rooms_list-item col-md-6 col-xl-4" data-order="1" data-aos="fade-up">
+                            <div class="item-wrapper d-md-flex flex-column">
+                                <div class="media">
+                                    <picture>
+                                        <source data-srcset="img/bracelet2.jpg" srcset="img/bracelet2.jpg" />
+                                        <img class="lazy" data-src="img/bracelet2.jpg" src="img/bracelet2.jpg" alt="media" />
+                                    </picture>
+                                    <span class="media_label media_label--pricing">
+                                        <span class="price h4">$27,810.00</span>
+                                    </span>
+                                </div>
+                                <div class="main d-md-flex flex-column justify-content-between flex-grow-1">
+                                    <a class="main_title h4"  data-shave="true">
+                                        Emerald and Diamond Bracelet
+                                    </a>
+                                    <div>
+                                        The strap-style bracelet centers a marquise-shaped diamond, accented with old European and single-cut diamonds and calibre-cut emeralds. 
+                                    </div>
+                                    <br><hr>
+                                    <br>
+                                    <div class="main_amenities">
+                                        <span class="main_amenities-item d-inline-flex align-items-center">
+                                            <i class="icon-user icon nb_hide"></i>
+                                            Marquise-shaped diamond weighing approximately 1.50 carats
+                                        </span>
+                                        <span class="main_amenities-item d-inline-flex align-items-center">
+                                            <i class="icon-bunk_bed icon nb_hide"></i>
+                                            Length 6 3/4 inches
+                                        </span>
+                                    </div>
+                                    <a class="link link--arrow d-inline-flex align-items-center" href="team.html">
+                                        See availability
+                                        <i class="icon-arrow_right icon"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="rooms_list-item col-md-6 col-xl-4" data-order="1" data-aos="fade-up">
+                            <div class="item-wrapper d-md-flex flex-column">
+                                <div class="media">
+                                    <picture>
+                                        <source data-srcset="img/bracelet3.jpg" srcset="img/bracelet3.jpg" />
+                                        <img class="lazy" data-src="img/bracelet3.jpg" src="img/bracelet3.jpg" alt="media" />
+                                    </picture>
+                                    <span class="media_label media_label--pricing">
+                                        <span class="price h4">$65,000.00</span>
+                                    </span>
+                                </div>
+                                <div class="main d-md-flex flex-column justify-content-between flex-grow-1">
+                                    <a class="main_title h4"  data-shave="true">
+                                        Emerald and Diamond Bracelet
+                                    </a>
+                                    <div>
+                                        The strap-style bracelet centers a marquise-shaped diamond, accented with old European and single-cut diamonds and calibre-cut emeralds. 
+                                    </div>
+                                    <br><hr>
+                                    <br>
+                                    <div class="main_amenities">
+                                        <span class="main_amenities-item d-inline-flex align-items-center">
+                                            <i class="icon-user icon nb_hide"></i>
+                                            Marquise-shaped diamond weighing approximately 1.50 carats
+                                        </span>
+                                        <span class="main_amenities-item d-inline-flex align-items-center">
+                                            <i class="icon-bunk_bed icon nb_hide"></i>
+                                            Length 6 3/4 inches
+                                        </span>
+                                    </div>
+                                    <a class="link link--arrow d-inline-flex align-items-center" href="team.html">
+                                        See availability
+                                        <i class="icon-arrow_right icon"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- BRACELET section end -->
+            
+
+
+
+            <!-- reviews section start -->
+            <section class="reviews section">
+                <div class="container d-lg-flex">
+                    <div class="media">
+                        <div class="reviews_slider reviews_slider--media">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <picture>
+                                        <source data-srcset="img/klzzzz.jpg" srcset="img/klzzzz.jpg" />
+                                        <img class="lazy" data-src="img/klzzzz.jpg" src="img/klzzzz.jpg" alt="media" />
+                                    </picture>
+                                </div>
+                                <div class="swiper-slide">
+                                    <picture>
+                                        <source data-srcset="img/klzzzz.jpg" srcset="img/klzzzz.jpg" />
+                                        <img class="lazy" data-src="img/klzzzz.jpg" src="img/klzzzz.jpg" alt="media" />
+                                    </picture>
+                                </div>
+                                <div class="swiper-slide">
+                                    <picture>
+                                        <source data-srcset="img/klzzzz.jpg" srcset="img/klzzzz.jpg" />
+                                        <img class="lazy" data-src="img/klzzzz.jpg" src="img/klzzzz.jpg" alt="media" />
+                                    </picture>
+                                </div>
+                                <div class="swiper-slide">
+                                    <picture>
+                                        <source data-srcset="img/klzzzz.jpg" srcset="img/klzzzz.jpg" />
+                                        <img class="lazy" data-src="img/klzzzz.jpg" src="img/klzzzz.jpg" alt="media" />
+                                    </picture>
+                                </div>
+                                <div class="swiper-slide">
+                                    <picture>
+                                        <source data-srcset="img/klzzzz.jpg" srcset="img/klzzzz.jpg" />
+                                        <img class="lazy" data-src="img/klzzzz.jpg" src="img/klzzzz.jpg" alt="media" />
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main col-lg-6 d-lg-flex flex-column justify-content-between">
+                        <h2 class="reviews_header" data-aos="fade-down">Reviews</h2>
+                        <div class="reviews_slider reviews_slider--main">
+                            <div class="swiper-wrapper">
+                                <div class="reviews_slider-slide d-flex flex-column justify-content-between swiper-slide">
+                                    <div class="reviews_slider-slide_stars d-flex align-items-center">
+                                        <i class="icon-star icon"></i>
+                                        <i class="icon-star icon"></i>
+                                        <i class="icon-star icon"></i>
+                                        <i class="icon-star icon"></i>
+                                        <i class="icon-star icon"></i>
+                                    </div>
+                                    <span class="reviews_slider-slide_date">
+                                        <span class="h4">Date:</span>
+                                        June 2021
+                                    </span>
+                                    <div class="reviews_slider-slide_main">
+                                        <h4 class="title">Perfectionist</h4>
+                                        <p class="text">
+                                            Vicky was so great. She took up a challenge. My design proved to be difficult. But it was glorious in the end. 
+                                            It was a representation of Gods Hands holding the kingdom of Heaven. The rings represent eternity. 
+                                            14k Gold antiqued with oxidized silver. Timeless.
+                                        </p>
+                                    </div>
+                                    <span class="reviews_slider-slide_guest d-flex align-items-center">
+                                        <span class="avatar">
+                                            <picture>
+                                                <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
+                                                <img
+                                                    class="lazy"
+                                                    data-src="img/placeholder.jpg"
+                                                    src="img/placeholder.jpg"
+                                                    alt="media"
+                                                />
+                                            </picture>
+                                        </span>
+                                        <span class="name h6">Betty Randal</span>
+                                    </span>
+                                </div>
+                                <div class="reviews_slider-slide d-flex flex-column justify-content-between swiper-slide">
+                                    <div class="reviews_slider-slide_stars d-flex align-items-center">
+                                        <i class="icon-star icon"></i>
+                                        <i class="icon-star icon"></i>
+                                        <i class="icon-star icon"></i>
+                                        <i class="icon-star icon"></i>
+                                        <i class="icon-star icon"></i>
+                                    </div>
+                                    <span class="reviews_slider-slide_date">
+                                        <span class="h4">Date:</span>
+                                        October 2021
+                                    </span>
+                                    <div class="reviews_slider-slide_main">
+                                        <h4 class="title">Great design and details</h4>
+                                        <p class="text">
+                                            Vicky helped design the engagement ring for my future wife. She was resourceful and really easy to work with. 
+                                            Thanks to Vicky, she said yes! I highly recommend Vicky for any custom jewelry design project!
+                                        </p>
+                                    </div>
+                                    <span class="reviews_slider-slide_guest d-flex align-items-center">
+                                        <span class="avatar">
+                                            <picture>
+                                                <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
+                                                <img
+                                                    class="lazy"
+                                                    data-src="img/placeholder.jpg"
+                                                    src="img/placeholder.jpg"
+                                                    alt="media"
+                                                />
+                                            </picture>
+                                        </span>
+                                        <span class="name h6">Max Jones</span>
+                                    </span>
+                                </div>
+                                <div class="reviews_slider-slide d-flex flex-column justify-content-between swiper-slide">
+                                    <div class="reviews_slider-slide_stars d-flex align-items-center">
+                                        <i class="icon-star icon"></i>
+                                        <i class="icon-star icon"></i>
+                                        <i class="icon-star icon"></i>
+                                        <i class="icon-star icon"></i>
+                                        <i class="icon-star icon"></i>
+                                    </div>
+                                    <span class="reviews_slider-slide_date">
+                                        <span class="h4">Date:</span>
+                                        April 2022
+                                    </span>
+                                    <div class="reviews_slider-slide_main">
+                                        <h4 class="title">Highly Recommend</h4>
+                                        <p class="text">
+                                            Vicky is amazing! She gracefully agreed to make earrings for my wedding on a short timeline. They were executed to perfection, highly recommend!
+                                        </p>
+                                    </div>
+                                    <span class="reviews_slider-slide_guest d-flex align-items-center">
+                                        <span class="avatar">
+                                            <picture>
+                                                <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
+                                                <img
+                                                    class="lazy"
+                                                    data-src="img/placeholder.jpg"
+                                                    src="img/placeholder.jpg"
+                                                    alt="media"
+                                                />
+                                            </picture>
+                                        </span>
+                                        <span class="name h6">Kate Walker</span>
+                                    </span>
+                                </div>
+                                <div class="reviews_slider-slide d-flex flex-column justify-content-between swiper-slide">
+                                    <div class="reviews_slider-slide_stars d-flex align-items-center">
+                                        <i class="icon-star icon"></i>
+                                        <i class="icon-star icon"></i>
+                                        <i class="icon-star icon"></i>
+                                        <i class="icon-star icon"></i>
+                                        <i class="icon-star icon"></i>
+                                    </div>
+                                    <span class="reviews_slider-slide_date">
+                                        <span class="h4">Date:</span>
+                                        April 2021
+                                    </span>
+                                    <div class="reviews_slider-slide_main">
+                                        <h4 class="title">Smooth and fun experience</h4>
+                                        <p class="text">
+                                            Working with Vicky was so easy and awesome. I had a wedding band I had in mind and she made my dream come true! She knew exactly what I wanted and she was very responsive and easy to work with. Not only was she professional and creative, but her personality is awesome as well. Would highly recommend Vicky if you want a smooth and fun experience in designing or redesigning your jewelry!
+                                        </p>
+                                    </div>
+                                    <span class="reviews_slider-slide_guest d-flex align-items-center">
+                                        <span class="avatar">
+                                            <picture>
+                                                <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
+                                                <img
+                                                    class="lazy"
+                                                    data-src="img/placeholder.jpg"
+                                                    src="img/placeholder.jpg"
+                                                    alt="media"
+                                                />
+                                            </picture>
+                                        </span>
+                                        <span class="name h6">Panam Palmer</span>
+                                    </span>
+                                </div>
+                                <div class="reviews_slider-slide d-flex flex-column justify-content-between swiper-slide">
+                                    <div class="reviews_slider-slide_stars d-flex align-items-center">
+                                        <i class="icon-star icon"></i>
+                                        <i class="icon-star icon"></i>
+                                        <i class="icon-star icon"></i>
+                                        <i class="icon-star icon"></i>
+                                        <i class="icon-star icon"></i>
+                                    </div>
+                                    <span class="reviews_slider-slide_date">
+                                        <span class="h4">Date:</span>
+                                        May 2021
+                                    </span>
+                                    <div class="reviews_slider-slide_main">
+                                        <h4 class="title">Professional</h4>
+                                        <p class="text">
+                                            Beautiful and professional work. I will continue to work with her.
+
+                                        </p>
+                                    </div>
+                                    <span class="reviews_slider-slide_guest d-flex align-items-center">
+                                        <span class="avatar">
+                                            <picture>
+                                                <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
+                                                <img
+                                                    class="lazy"
+                                                    data-src="img/placeholder.jpg"
+                                                    src="img/placeholder.jpg"
+                                                    alt="media"
+                                                />
+                                            </picture>
+                                        </span>
+                                        <span class="name h6">Lisa Adams</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-controls d-flex align-items-center">
+                            <a class="swiper-button-prev d-inline-flex theme-element theme-element--light" href="#">
+                                <i class="icon-arrow_left icon"></i>
+                            </a>
+                            <a class="swiper-button-next d-inline-flex theme-element theme-element--light" href="#">
+                                <i class="icon-arrow_right icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- reviews section end -->
+            <!-- promo section start -->
+            <section class="promo section">
+                <div class="container">
+                    <div class="container d-xl-flex align-items-center justify-content-between">
+                        <div class="promo_info">
+                            <h2 class="info_header" data-aos="fade-up">Newly Released</h2>
+                            <p class="info_text" data-aos="fade-up" data-aos-delay="50">
+                                Check out our new release designed and crafted by our one and only Zee.
+                            </p>
+                        </div>
+                        <div class="promo_media" data-aos="fade-up">
+                            <picture>
+                                <source data-srcset="img/newly.jpg" srcset="img/newly.jpg" />
+                                <img class="lazy" data-src="img/newly.jpg" src="img/newly.jpg" alt="media" />
+                            </picture>
+                            <div class="media_card media_card--top" data-aos="fade-left">
+                                <h4 class="media_card-text">Emerald And Diamond Cluster Necklace Set In 18k Yellow Gold</h4>
+                                <div class="media_card-footer d-flex align-items-center">
+                                    <span class="avatar">
+                                        <picture>
+                                            <source data-srcset="img/newly.jpg" srcset="img/newly.jpg" />
+                                            <img
+                                                class="lazy"
+                                                data-src="img/newly.jpg"
+                                                src="img/newly.jpg"
+                                                alt="media"
+                                            />
+                                        </picture>
+                                    </span>
+                                    <div class="wrapper d-flex flex-column">
+                                        <div class="stars d-flex align-items-center">
+                                            <i class="icon-star icon"></i>
+                                            <i class="icon-star icon"></i>
+                                            <i class="icon-star icon"></i>
+                                            <i class="icon-star icon"></i>
+                                            <i class="icon-star icon"></i>
+                                        </div>
+                                        <span class="name h6">Certified</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="media_card media_card--bottom" data-aos="fade-right">
+                                <h4 class="media_card-text"></h4>
+                                <div class="media_card-pricing"><span class="h2">$3,400.00</span> </div>
+                                <a class="media_card-btn btn theme-element theme-element--light" href="team.html">Buy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- contacts section start -->
+            <section class="contacts section">
+                <div class="container container--contacts d-xl-flex align-items-center">
+                    <div class="contacts_info">
+                        <div class="contacts_info-header">
+                            <h2 class="contacts_info-header_title" data-aos="fade-down">Contacts</h2>
+                            <p class="contacts_info-header_text" data-aos="fade-up">
+                                We are delighted to welcome you to Savile Row Company's 
+                                brand-new showroom, located at our Wyoming HQ in Jackson.
+                                For the first time ever, you are able to try on pieces from the 
+                                latest collections before you place an order.
+                            </p>
+                        </div>
+                        <ul class="contacts_info-list col-xl-7 d-md-flex flex-wrap">
+                            <li class="contacts_info-list_item col-md-6 d-flex align-items-center" data-order="1" data-aos="fade-up">
+                                <span class="theme-element theme-element--light media">
+                                    <span class="icon-call icon">
+                                        <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M26.9609 19.75L21 17.1797C20.7812 17.125 20.5625 17.0703 20.3438 17.0703C19.7969 17.0703 19.3047 17.2891 19.0312 17.6719L16.625 20.625C12.7969 18.7656 9.73438 15.7031 7.875 11.875L10.8281 9.46875C11.2109 9.19531 11.4297 8.70312 11.4297 8.15625C11.4297 7.9375 11.375 7.71875 11.3203 7.5L8.75 1.53906C8.47656 0.9375 7.875 0.5 7.21875 0.5C7.05469 0.5 6.94531 0.554688 6.83594 0.554688L1.3125 1.86719C0.546875 2.03125 0 2.6875 0 3.50781C0 17.3438 11.2109 28.5 24.9922 28.5C25.8125 28.5 26.4688 27.9531 26.6875 27.1875L27.9453 21.6641C27.9453 21.5547 27.9453 21.4453 27.9453 21.2812C27.9453 20.625 27.5625 20.0234 26.9609 19.75ZM24.9375 26.75C12.1406 26.75 1.75 16.3594 1.75 3.5625L7.16406 2.30469L9.67969 8.15625L5.6875 11.4375C8.36719 17.0703 11.4297 20.1328 17.1172 22.8125L20.3438 18.8203L26.1953 21.3359L24.9375 26.75Z"
+                                                fill="currentColor"
+                                            />
+                                        </svg>
+                                    </span>
+                                </span>
+                                <div class="main d-flex flex-column">
+                                    <h4 class="main_title">Phone</h4>
+                                    <a class="link" href="tel:+1234567890">(329) 580-7077</a>
+                                    <a class="link" href="tel:+1234567890">(650) 382-5020</a>
+                                </div>
+                            </li>
+                            <li class="contacts_info-list_item col-md-6 d-flex align-items-center" data-order="2" data-aos="fade-up">
+                                <span class="theme-element theme-element--light media">
+                                    <i class="icon-email icon"></i>
+                                </span>
+                                <div class="main d-flex flex-column">
+                                    <h4 class="main_title">Email</h4>
+                                    <a class="link" href="mailto:info@ascotjewelers.com">info@ascotjewelers.com</a>
+                                    <a class="link" href="mailto:contact@ascotjewelers.com">contact@ascotjewelers.com</a>
+                                </div>
+                            </li>
+                            <li class="contacts_info-list_item col-md-6 d-flex align-items-center" data-order="3" data-aos="fade-up">
+                                <span class="theme-element theme-element--light media">
+                                    <i class="icon-location icon"></i>
+                                </span>
+                                <div class="main d-flex flex-column">
+                                    <h4 class="main_title">Location</h4>
+                                    <span>944 Main St, </span>
+                                    <span>Evanston, WY 82930 (SHOWROOM)</span>
+                                </div>
+                            </li>
+                            <li class="contacts_info-list_item col-md-6 d-flex align-items-center" data-order="4" data-aos="fade-up">
+                                <span class="theme-element theme-element--light media">
+                                    <i class="icon-clock icon"></i>
+                                </span>
+                                <div class="main d-flex flex-column">
+                                    <h4 class="main_title">Working Time</h4>
+                                    <span>Everyday</span>
+                                    <span>08:30 am — 8:30 pm</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="contacts_map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48019.909590215706!2d-110.63235603452148!3d41.21644528970189!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8751791baa8618fb%3A0xfeb5018d28d7a1f8!2s944%20Main%20St%2C%20Evanston%2C%20WY%2082930!5e0!3m2!1sen!2sus!4v1656640039626!5m2!1sen!2sus" width="600" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </section>
+            <!-- contacts section end -->
+        </main>
+        <div class="video d-flex align-items-center justify-content-center">
+            <div class="container">
+                <div class="video_frame d-flex align-items-center justify-content-center">
+                    <i class="icon-close video_frame-close"></i>
+                    <div id="player"></div>
+                </div>
+            </div>
+        </div>
+        <!-- homepage content end -->
+        <footer class="footer accent">
+            <div class="container">
+                <div class="footer_main d-sm-flex flex-wrap flex-lg-nowrap justify-content-between">
+                    <div class="footer_main-block footer_main-block--about col-sm-7 col-lg-auto d-flex flex-column">
+                        <a class="brand d-flex align-items-center" href="index.html">
+                            <span class="brand_logo theme-element">
+                                <svg
+                                    id="brandFooter"
+                                    width="22"
+                                    height="23"
+                                    viewBox="0 0 22 23"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M7.03198 3.80281V7.07652L3.86083 9.75137L0.689673 12.4263L0.667474 6.56503C0.655304 3.34138 0.663875 0.654206 0.686587 0.593579C0.71907 0.506918 1.4043 0.488223 3.87994 0.506219L7.03198 0.529106V3.80281ZM21.645 4.36419V5.88433L17.0383 9.76316C14.5046 11.8966 11.2263 14.6552 9.75318 15.8934L7.07484 18.145V20.3225V22.5H3.85988H0.64502L0.667303 18.768L0.689673 15.036L2.56785 13.4609C3.60088 12.5946 6.85989 9.85244 9.81009 7.36726L15.1741 2.84867L18.4096 2.8464L21.645 2.84413V4.36419ZM21.645 15.5549V22.5H18.431H15.217V18.2638V14.0274L15.4805 13.7882C15.8061 13.4924 21.5939 8.61606 21.6236 8.61248C21.6353 8.61099 21.645 11.7351 21.645 15.5549Z"
+                                        fill="currentColor"
+                                    />
+                                </svg>
+                            </span>
+                            <span class="brand_name">Ascot Jewelers</span>
+                        </a>
+                        <p class="footer_main-block_text">
+                            We make it all from scratch - design to final polish. We can reuse your gold and gems to make a new piece of art if you have a heirloom, sentimental or other jewelry, or can create a brand new jewelry that will match your likes and imagination.
+                        </p>
+                    </div>
+                    <div class="footer_main-block footer_main-block--nav col-sm-6 col-lg-auto">
+                        <h4 class="footer_main-block_header">Quick links</h4>
+                        <ul class="footer_main-block_nav d-flex flex-lg-column">
+                            <li class="list-item">
+                                <a class="link underlined underlined--white nav-item" data-page="home" href="index.html">Home</a>
+                            </li>
+                            <li class="list-item">
+                                <a class="link underlined underlined--white nav-item" data-page="Necklace" href="#Necklace">Necklace</a>
+                            </li>
+                            <li class="list-item">
+                                <a class="link underlined underlined--white nav-item" data-page="Bracelet" href="#Bracelet">Bracelet</a>
+                            </li>
+                            <li class="list-item">
+                                <a class="link underlined underlined--white nav-item" data-page="Ring" href="#Ring">Ring</a>
+                            </li>
+                            <li class="list-item">
+                                <a class="link underlined underlined--white nav-item" data-page="Team" href="#Team">Our Team</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_main-block footer_main-block--contacts col-sm-5 col-lg-auto">
+                        <h4 class="footer_main-block_header">Contact Us</h4>
+                        <ul class="footer_main-block_contacts">
+                            <li class="list-item d-flex">
+                                <i class="icon-location icon"></i>
+                                <p class="wrapper">
+                                    <span class="linebreak"> 944 Main St, </span>
+                                    <span class="linebreak"> Evanston, WY 82930 </span>
+                                </p>
+                            </li>
+                            <li class="list-item d-flex">
+                                <span class="icon-call icon">
+                                    <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M26.9609 19.75L21 17.1797C20.7812 17.125 20.5625 17.0703 20.3438 17.0703C19.7969 17.0703 19.3047 17.2891 19.0312 17.6719L16.625 20.625C12.7969 18.7656 9.73438 15.7031 7.875 11.875L10.8281 9.46875C11.2109 9.19531 11.4297 8.70312 11.4297 8.15625C11.4297 7.9375 11.375 7.71875 11.3203 7.5L8.75 1.53906C8.47656 0.9375 7.875 0.5 7.21875 0.5C7.05469 0.5 6.94531 0.554688 6.83594 0.554688L1.3125 1.86719C0.546875 2.03125 0 2.6875 0 3.50781C0 17.3438 11.2109 28.5 24.9922 28.5C25.8125 28.5 26.4688 27.9531 26.6875 27.1875L27.9453 21.6641C27.9453 21.5547 27.9453 21.4453 27.9453 21.2812C27.9453 20.625 27.5625 20.0234 26.9609 19.75ZM24.9375 26.75C12.1406 26.75 1.75 16.3594 1.75 3.5625L7.16406 2.30469L9.67969 8.15625L5.6875 11.4375C8.36719 17.0703 11.4297 20.1328 17.1172 22.8125L20.3438 18.8203L26.1953 21.3359L24.9375 26.75Z"
+                                            fill="currentColor"
+                                        />
+                                    </svg>
+                                </span>
+                                <p class="wrapper d-flex flex-column">
+                                    <a class="link" href="tel:+1234567890">(329) 580-7077</a>
+                                    <a class="link" href="tel:+1234567890">(650) 382-5020</a>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_main-block footer_main-block--follow col-sm-5 col-lg-auto d-flex flex-column">
+                        <h4 class="footer_main-block_header">Follow Us</h4>
+                        <p class="footer_main-block_text">Stay up-to-date on our latest projects and events</p>
+                        <ul class="socials d-flex align-items-center">
+                            <li class="list-item">
+                                <a class="link" href="#">
+                                    <i class="icon-facebook"></i>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a class="link" href="#">
+                                    <i class="icon-instagram"></i>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a class="link" href="#">
+                                    <i class="icon-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a class="link" href="#">
+                                    <i class="icon-whatsapp"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_copyright">
+                <div class="container">
+                    <p class="footer_copyright-text">
+                        <span class="linebreak">Ascot Jewelers &copy; Ascot Group</span>
+                        <span class="linebreak">All rights reserved Copyrights 2024</span>
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <script>
+            function moveToAwards(){
+                window.location.href = "awards.html";
+
+            }
+        </script>
+        <script src="js/common.min.js"></script>
+        <script src="js/index.min.js"></script>
+        <script src="js/gallery.min.js"></script>
+        <script src="homeGOD.js"></script>
+    </body>
+</html>

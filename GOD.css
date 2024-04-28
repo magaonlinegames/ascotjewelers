@@ -1,0 +1,171 @@
+.ghide{
+    display: none!important;
+}
+
+
+
+.ldr{
+  display: inline-block;
+  padding-left: 6px;
+}
+.vote_btn{
+  text-align: center;
+  display: block!important;
+  background-color: #ddeaf6;
+  padding: 8px;
+  border-radius: 3px;
+}
+.vote_designer_name{
+  text-align: center;
+}
+
+.votedForWho{
+  text-transform: capitalize;
+}
+#voter_chosen{
+    color: blue;
+    text-transform: uppercase;
+}
+.checked{
+    text-align: center;
+}
+.mainCircle{
+    background-color: transparent;
+    width:330px;
+    height:330px;
+    border:1px solid rgba(204, 204, 204);
+    position:absolute;
+    top:0; bottom:0; left:0;right:0;
+    margin:auto;
+    border-radius:50%; 
+  }
+  
+  .circle{
+    width:30px;
+    height:30px;
+    background:rgb(2, 123, 237);
+    border-radius:50%;
+    position:absolute;
+    top:0; 
+    bottom:0; left:0;right:0;
+    overflow:hidden;
+    margin:auto;
+    animation: circle 6s linear infinite;
+  }
+  
+  @keyframes circle{
+    0%{
+      transform:rotate(0deg)
+                translate(-165px)
+                rotate(0deg);
+    
+    }
+    100%{
+      transform:rotate(360deg)
+                translate(-165px)
+                rotate(-360deg);
+    }
+  }
+
+
+.checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #0075ff;
+    fill: none;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+  }
+  
+  .checkmark {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    margin: 10% auto;
+    box-shadow: inset 0px 0px 0px #0075ff;
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+  }
+  
+  .checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+  }
+  
+  @keyframes stroke {
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  @keyframes scale {
+    0%, 100% {
+      transform: none;
+    }
+    50% {
+      transform: scale3d(1.1, 1.1, 1);
+    }
+  }
+  @keyframes fill {
+    100% {
+      box-shadow: inset 0px 0px 0px 30px #0075ff;
+    }
+  }
+
+.VOTERID{
+    position: fixed;
+    z-index: 999999;
+    top: 0;
+    bottom: 0;
+    background-color: grey;
+}
+
+
+.hide-card{
+    display: none;
+}
+
+.vote-confirmed{
+    border: 1px solid rgba(255, 255, 255, 0);
+    width: 90%;
+    margin: auto;
+    height: 94%;
+    margin-top: 15px;
+    background-color: #ffffffe3;
+    border-radius: 9px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    
+}
+.VOTER_INFO{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 9999999;
+    background-color: #ffffff;
+    overflow: auto;
+}
+.VOTER_INFO .review{
+    margin: auto;
+}
+.VOTER_INFO .review_header{
+    color: white;
+}
+.fwidth{
+    width: 100%!important;
+}
+.form_card{
+    width: 98%;
+    max-width: 788px;
+    height: 90%;
+    margin: auto;
+    position: relative;
+    top: 5%;
+    padding: 6px;
+}
