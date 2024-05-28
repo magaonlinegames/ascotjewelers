@@ -365,30 +365,22 @@
                                 <form class="booking" action="#" method="post" autocomplete="off" data-type="booking">
                                     <div class="booking_group d-flex flex-column">
 
-                                        <!-- davene vote -->
-                                        <hr>
-                                        <div class="hide" style="display: block;">
-                                            <label class="booking_group-label h5" for="checkIn">Davene Muller</label>
 
-                                            <div class="booking_group-wrapper hide" >
-                                                <span class="davene_vote" id="vote"> </span> 
-                                                <span class="ldr">  votes</span>
-                                            </div>
-                                        </div>
-                                        <hr>
-
-                                        
-                                        <!-- james -->
-                                        <div class="hide" style="display: block;">
+                                         <!-- james -->
+                                         <div class="hide" style="display: block;">
                                             <label class="booking_group-label h5" for="checkIn">James D Olsen</label>
 
                                             <div class="booking_group-wrapper hide" >
                                                 <span class="james_vote" id="vote"> </span> 
-                                                <span class="ldr">  votes</span>
+                                                <span class="ldr"> 21 votes</span>
                                             </div>
                                         </div>
 
                                         <hr>
+
+                                        
+                                        
+                                       
                                         
                                         
                                         
@@ -398,11 +390,22 @@
 
                                             <div class="booking_group-wrapper hide" >
                                                 <span class="donna_vote" id="vote"> </span> 
-                                                <span class="ldr">  votes</span>
+                                                <span class="ldr"> 15 votes</span>
                                             </div>
                                         </div>
 
-                                        
+                                        <!-- davene vote -->
+                                        <hr>
+                                        <div class="hide" style="display: block;">
+                                            <label class="booking_group-label h5" for="checkIn">Davene Muller</label>
+
+                                            <div class="booking_group-wrapper hide" >
+                                                <span class="davene_vote" id="vote"> </span> 
+                                                <span class="ldr"> 9 votes</span>
+                                            </div>
+                                        </div>
+                                        <hr>
+
 
                                         <!-- martha vote -->
                                         <hr>
@@ -411,7 +414,7 @@
 
                                             <div class="booking_group-wrapper hide" >
                                                 <span class="martha_vote" id="vote"> </span> 
-                                                <span class="ldr">  votes</span>
+                                                <span class="ldr"> 8 votes</span>
                                             </div>
                                         </div>
 
@@ -437,32 +440,6 @@
                             </div>
                             <ul class="rooms_list d-md-flex flex-wrap">
 
-                                
-                                <!-- DAVENE -->
-                                <li class="rooms_list-item col-md-6 col-xl-4" data-order="1" data-aos="fade-up">
-                                    <div class="item-wrapper d-md-flex flex-column">
-                                        <div class="media">
-                                            <picture>
-                                                <source data-srcset="img/davene.jpg" srcset="img/davene.jpg" />
-                                                <img class="lazy" data-src="img/davene.jpg" src="img/davene.jpg" alt="media" />
-                                            </picture>
-                                            <span class="media_label media_label--pricing">
-                                                <span class="price h4 davene_vote"></span>
-                                                votes 
-                                            </span>
-                                        </div>
-                                        <div class="main d-md-flex flex-column justify-content-between flex-grow-1">
-                                            <a class="main_title h4 vote_designer_name" onclick="voteFor('davene')" data-shave="true">
-                                                Davene O. Muller
-                                            </a>
-                                            <a class="link link--arrow d-inline-flex align-items-center vote_btn" onclick="voteFor('davene')">
-                                                Vote
-                                                <i class="icon-arrow_right icon"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </li>
-
                                 <!-- JAMES -->
                                 <li class="rooms_list-item col-md-6 col-xl-4" data-order="1" data-aos="fade-up">
                                     <div class="item-wrapper d-md-flex flex-column">
@@ -473,7 +450,7 @@
                                             </picture>
                                             <span class="media_label media_label--pricing">
                                                 <span class="price h4 james_vote"> 
-
+                                                    21
                                                 </span>
                                                 votes 
                                             </span>
@@ -491,6 +468,9 @@
                                 </li>
 
                                 
+                                
+                                
+                                
                                 <!-- DONNA -->
                                 <li class="rooms_list-item col-md-6 col-xl-4" data-order="1" data-aos="fade-up" onclick="openDonna();">
                                     <div class="item-wrapper d-md-flex flex-column">
@@ -500,7 +480,9 @@
                                                 <img class="lazy" data-src="img/muller222.jpg" src="img/muller222.jpg" alt="media" />
                                             </picture>
                                             <span class="media_label media_label--pricing">
-                                                <span class="price h4 donna_vote"></span>
+                                                <span class="price h4 donna_vote">
+                                                    15
+                                                </span>
                                                 votes 
                                             </span>
                                         </div>
@@ -517,7 +499,33 @@
                                 </li>
 
 
-                                
+                                <!-- DAVENE -->
+                                <li class="rooms_list-item col-md-6 col-xl-4" data-order="1" data-aos="fade-up">
+                                    <div class="item-wrapper d-md-flex flex-column">
+                                        <div class="media">
+                                            <picture>
+                                                <source data-srcset="img/davene.jpg" srcset="img/davene.jpg" />
+                                                <img class="lazy" data-src="img/davene.jpg" src="img/davene.jpg" alt="media" />
+                                            </picture>
+                                            <span class="media_label media_label--pricing">
+                                                <span class="price h4 davene_vote">
+                                                    9
+                                                </span>
+                                                votes 
+                                            </span>
+                                        </div>
+                                        <div class="main d-md-flex flex-column justify-content-between flex-grow-1">
+                                            <a class="main_title h4 vote_designer_name" onclick="voteFor('davene')" data-shave="true">
+                                                Davene O. Muller
+                                            </a>
+                                            <a class="link link--arrow d-inline-flex align-items-center vote_btn" onclick="voteFor('davene')">
+                                                Vote
+                                                <i class="icon-arrow_right icon"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+
 
                                 <!-- MARTHA -->
                                 <li class="rooms_list-item col-md-6 col-xl-4" data-order="1" data-aos="fade-up">
@@ -528,7 +536,9 @@
                                                 <img class="lazy" data-src="img/martha.jpg" src="img/martha.jpg" alt="media" />
                                             </picture>
                                             <span class="media_label media_label--pricing">
-                                                <span class="price h4 martha_vote"></span>
+                                                <span class="price h4 martha_vote">
+                                                    8
+                                                </span>
                                                 votes 
                                             </span>
                                         </div>
@@ -569,7 +579,7 @@
                                 <div class="main">
                                     <div class="main_info d-flex flex-column">
                                         <span class="name h4">Evelyn Summers</span>
-                                        <span class="date">April 7, 2024</span>
+                                        <span class="date">May 28, 2024</span>
                                     </div>
                                     <p class="text">
                                         I think davene understands what you want and delivers exactly what you want 
@@ -590,7 +600,7 @@
                                 <div class="main">
                                     <div class="main_info d-flex flex-column">
                                         <span class="name h4"> Lucas Harper</span>
-                                        <span class="date">April 7, 2024</span>
+                                        <span class="date">May 28, 2024</span>
                                     </div>
                                     <p class="text">
                                         James designs are nothing short of breathtaking! I recently purchased
@@ -613,7 +623,7 @@
                                 <div class="main">
                                     <div class="main_info d-flex flex-column">
                                         <span class="name h4">Jasmine Rodriquez</span>
-                                        <span class="date">April 6 2024</span>
+                                        <span class="date">May 28 2024</span>
                                     </div>
                                     <p class="text">
                                         I am absolutely in love with the ring I bought from Davene. The intricate design and 
@@ -635,7 +645,7 @@
                                 <div class="main">
                                     <div class="main_info d-flex flex-column">
                                         <span class="name h4"> Alexander Blake </span>
-                                        <span class="date">April 5 2024</span>
+                                        <span class="date">May 28 2024</span>
                                     </div>
                                     <p class="text">
                                         I ordered the Goddess leggings and Strappy Fitness Bralette. I have no complaints with the goddess leggings as they arrived just over the 2 weeks described and they came exactly as advertised. However, I paid extra for shipping to receive the bralette also within 2 weeks and it arrived 4 weeks later! It was also a completely different color than advertised on the website. I ordered the magenta but it turned out to be more of a light pink. If it were any other company I would exchange this for a different color but dealing with them was such a pain that i'm just going to have to live with it.
@@ -655,7 +665,7 @@
                                 <div class="main">
                                     <div class="main_info d-flex flex-column">
                                         <span class="name h4"> Harper Smith </span>
-                                        <span class="date">April 5 2024</span>
+                                        <span class="date">May 28 2024</span>
                                     </div>
                                     <p class="text">
                                         I admire Donna not only for her incredible talent as a designer 
@@ -729,6 +739,13 @@
                                 <p class="wrapper">
                                     <span class="linebreak"> 944 Main St, </span>
                                     <span class="linebreak"> Evanston, WY 82930 </span>
+                                </p>
+                            </li>
+                            <li class="list-item d-flex">
+                                <i class="icon-location icon"></i>
+                                <p class="wrapper">
+                                    <span class="linebreak"> 875 Third Ave, Ste L107 </span>
+                                    <span class="linebreak"> New York, NY 10022 </span>
                                 </p>
                             </li>
                             <li class="list-item d-flex">
