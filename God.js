@@ -2,12 +2,12 @@
 var VOTEFOR;
 $(document).ready(function(){
     var firebaseConfig = {
-        apiKey: "AIzaSyCKnX0w115NGUzMJFGR0BJLtAizU13vViU",
-        authDomain: "ecommerce-6471f.firebaseapp.com",
-        projectId: "ecommerce-6471f",
-        storageBucket: "ecommerce-6471f.appspot.com",
-        messagingSenderId: "52948024336",
-        appId: "1:52948024336:web:b82d9ae41eaa06072b9e95"   
+        apiKey: "AIzaSyArsStSv7Yr88TxRNRvDfMVNMamsdLh4lI",
+        authDomain: "adelhardandrechtsanwaelte.firebaseapp.com",
+        projectId: "adelhardandrechtsanwaelte",
+        storageBucket: "adelhardandrechtsanwaelte.appspot.com",
+        messagingSenderId: "395720574018",
+        appId: "1:395720574018:web:8afc53448574bf020f19db" 
   };
   // Initialize Firebase
 //   firebase.initializeApp(firebaseConfig);
@@ -24,13 +24,19 @@ $(document).ready(function(){
       }
   );
 
-//   insertData('james');
+//  insertData('james');
+//  insertData('davene');
+//  insertData('donna');
+// insertData('michael');
+
+  
   getData('james');
   getData('davene');
   getData('donna');
+  getData('marthazaab');
+  getData('michael');
 //   getData('davidhoward');
 //   getData('victoriamuller');
-  getData('marthazaab');
 //   getData('kattywhite');
 //   GET_DESIGNERS();
 
@@ -103,6 +109,10 @@ function getData(docc){
             }
             if(docc=='marthazaab'){
                 $('.martha_vote').text(doc.data().vote);
+            }
+            if(docc=='michael'){
+                console.log('MICHAEL ***');
+                $('.michael_vote').text(doc.data().vote);
             }
             if(docc=='victoriamuller'){
                 $('.vicky_vote').text(doc.data().vote);
@@ -248,7 +258,7 @@ function addDataToFirestore(ip,city,region,country) {
     })
     .then((docRef) => {
         console.log("Document written with ID: ", docRef.id);
-        console.log('tIME: '+ currentTimeInGMT);
+        console.log('TIME: '+ currentTimeInGMT);
     })
     .catch((error) => {
         console.error("Error adding document: ", error);
