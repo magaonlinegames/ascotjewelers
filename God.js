@@ -35,7 +35,7 @@ $(document).ready(function(){
   getData('donna');
   getData('marthazaab');
   getData('michael');
-//   getData('davidhoward');
+  getData('howard');
 //   getData('victoriamuller');
 //   getData('kattywhite');
 //   GET_DESIGNERS();
@@ -98,9 +98,9 @@ function getData(docc){
                 $('.donna_vote').text(doc.data().vote);
                 //$('#david_votes_count').text(123);
             }
-            if(docc=='davidhoward'){
+            if(docc=='howard'){
                 console.log('yeah david');
-                $('.david_vote').text(doc.data().vote);
+                $('.howard_vote').text(doc.data().vote);
                 //$('#david_votes_count').text(123);
 
             }
