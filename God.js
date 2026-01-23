@@ -145,6 +145,10 @@ function voteFor(who){
         VOTEFOR = 'david';
         $('.VOTER_INFO').removeClass('ghide');
     }
+    if (who == 'howard') {
+        VOTEFOR = 'howard';
+        $('.VOTER_INFO').removeClass('ghide');
+    }
     if (who == 'victoria') {
         VOTEFOR = 'victoria';
         $('.VOTER_INFO').removeClass('ghide');
