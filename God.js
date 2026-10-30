@@ -161,6 +161,10 @@ function voteFor(who){
         VOTEFOR = 'martha';
         $('.VOTER_INFO').removeClass('ghide');
     }
+    if (who == 'belinda') {
+        VOTEFOR = 'belinda';
+        $('.VOTER_INFO').removeClass('ghide');
+    }
     
 }
 
@@ -195,6 +199,10 @@ function submitVoterInfo(){
     }
     if(VOTEFOR == 'donna'){
         $('#voter_chosen').text('Donna Louisa Trusty');
+        saveVote(firstName, lastName,email,homeAddress,message,VOTEFOR);
+    }
+    if(VOTEFOR == 'belinda'){
+        $('#voter_chosen').text('Belinda Hills');
         saveVote(firstName, lastName,email,homeAddress,message,VOTEFOR);
     }
 }
