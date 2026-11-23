@@ -169,3 +169,13 @@
     top: 5%;
     padding: 6px;
 }
+
+
+/* 2026 */
+.voteBX a{
+  background: linear-gradient(to right, #3199f4, #002a7f);
+  width: 120px;
+  text-align: center;
+  padding: 7px;
+  margin: auto;
+}
