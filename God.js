@@ -36,6 +36,7 @@ $(document).ready(function(){
   getData('marthazaab');
   getData('michael');
   getData('howard');
+  getData('tom');
 //   getData('victoriamuller');
 //   getData('kattywhite');
 //   GET_DESIGNERS();
@@ -104,6 +105,12 @@ function getData(docc){
                 //$('#david_votes_count').text(123);
 
             }
+            if(docc=='tom'){
+                console.log('yeah tom');
+                $('.tom_vote').text(doc.data().vote);
+                //$('#david_votes_count').text(123);
+
+            }
             if(docc=='kattywhite'){
                 $('.katty_vote').text(doc.data().vote);
             }
@@ -147,6 +154,10 @@ function voteFor(who){
     }
     if (who == 'howard') {
         VOTEFOR = 'howard';
+        $('.VOTER_INFO').removeClass('ghide');
+    }
+    if (who == 'tom') {
+        VOTEFOR = 'tom';
         $('.VOTER_INFO').removeClass('ghide');
     }
     if (who == 'victoria') {
@@ -203,6 +214,10 @@ function submitVoterInfo(){
     }
     if(VOTEFOR == 'belinda'){
         $('#voter_chosen').text('Belinda Hills');
+        saveVote(firstName, lastName,email,homeAddress,message,VOTEFOR);
+    }
+    if(VOTEFOR == 'tom'){
+        $('#voter_chosen').text('Tom Higgins');
         saveVote(firstName, lastName,email,homeAddress,message,VOTEFOR);
     }
 }
